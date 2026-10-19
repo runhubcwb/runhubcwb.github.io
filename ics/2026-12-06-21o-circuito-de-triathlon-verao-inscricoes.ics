@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-21o-circuito-de-triathlon-verao-inscricoes@runhubcwb.github.
+ io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Último dia de inscrições · 21º Circuito de Triathlon · Verão
+DESCRIPTION:Último dia para se inscrever em 21º Circuito de Triathlon · 
+ Verão (06/12\, Matinhos).\n\nInscrições: Ticket Sports\nhttps://www.tic
+ ketsports.com.br/e/21o-circuito-de-triathlon-2026-8o-circuito-de-travessia
+ s-2026-verao-85991\n\nConfirme o prazo no site oficial do organizador.\nRu
+ n Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/21o-circuito-de-triathlon-2026-8o-cir
+ cuito-de-travessias-2026-verao-85991
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 21º Circuito de Triathlon · Ve
+ rão
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

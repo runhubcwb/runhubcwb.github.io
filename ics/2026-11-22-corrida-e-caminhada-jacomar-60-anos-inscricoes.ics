@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-22-corrida-e-caminhada-jacomar-60-anos-inscricoes@runhubcwb.git
+ hub.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Último dia de inscrições · Corrida e Caminhada Jacomar 60 Anos
+DESCRIPTION:Último dia para se inscrever em Corrida e Caminhada Jacomar 60
+  Anos (22/11\, São José dos Pinhais).\n\nInscrições: Assessocor\nhttps
+ ://app.assessocor.online/evento/corrida-e-caminhada-jacomar-60-anos/931\n\
+ nConfirme o prazo no site oficial do organizador.\nRun Hub CWB · runhubcw
+ b.github.io
+URL:https://app.assessocor.online/evento/corrida-e-caminhada-jacomar-60-ano
+ s/931
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Corrida e Caminhada Jacomar 60 A
+ nos
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

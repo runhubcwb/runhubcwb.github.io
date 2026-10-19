@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-21o-circuito-de-triathlon-verao@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:21º Circuito de Triathlon · Verão
+DESCRIPTION:21º Circuito de Triathlon · Verão\nMatinhos · 5K\nHorário 
+ de largada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ticket
+ sports.com.br/e/21o-circuito-de-triathlon-2026-8o-circuito-de-travessias-2
+ 026-verao-85991\n\nConfirme data\, horário e local no site oficial do org
+ anizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Praia Mansa de Caiobá\, Matinhos - PR
+URL:https://www.ticketsports.com.br/e/21o-circuito-de-triathlon-2026-8o-cir
+ cuito-de-travessias-2026-verao-85991
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:21º Circuito de Triathlon · Verão
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

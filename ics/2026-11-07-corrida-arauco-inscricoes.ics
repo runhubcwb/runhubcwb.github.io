@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-07-corrida-arauco-inscricoes@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:Último dia de inscrições · Corrida Arauco
+DESCRIPTION:Último dia para se inscrever em Corrida Arauco (07/11\, Arauc
+ ária).\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.br/e/
+ e-88563\n\nConfirme o prazo no site oficial do organizador.\nRun Hub CWB 
+ · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88563
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Corrida Arauco
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-corrida-viva-mais-ranking-aent-etapa-8@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Corrida Viva Mais (Ranking AENT Etapa 8)
+DESCRIPTION:Corrida Viva Mais (Ranking AENT Etapa 8)\nCuritiba · 10K · 5K
+ \nHorário de largada a confirmar.\n\nInscrições: Ticket Sports\nhttps:/
+ /www.ticketsports.com.br/e/e-88719\n\nConfirme data\, horário e local no 
+ site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:UFPR Centro Politécnico (Av. Cel. Francisco H. dos Santos\, 210)\
+ , Curitiba - PR
+URL:https://www.ticketsports.com.br/e/e-88719
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida Viva Mais (Ranking AENT Etapa 8)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

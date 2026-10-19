@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-10-24-run-vibe-cwb@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Run Vibe CWB
+DESCRIPTION:Run Vibe CWB\nCuritiba · distâncias a confirmar\nHorário de 
+ largada a confirmar.\n\nInscrições: Sympla\nhttps://www.sympla.com.br/ev
+ ento/run-vibe/3550480\n\nConfirme data\, horário e local no site oficial 
+ do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Praça Nossa Senhora de Salette\, Curitiba - PR
+URL:https://www.sympla.com.br/evento/run-vibe/3550480
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Run Vibe CWB
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

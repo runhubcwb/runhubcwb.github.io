@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-07-corrida-arauco@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Corrida Arauco
+DESCRIPTION:Corrida Arauco\nAraucária · 10K · 5K\nHorário de largada a 
+ confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.br
+ /e/e-88563\n\nConfirme data\, horário e local no site oficial do organiza
+ dor.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Parque Cachoeira (R. Guanabara\, Iguaçu)\, Araucária - PR
+URL:https://www.ticketsports.com.br/e/e-88563
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida Arauco
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

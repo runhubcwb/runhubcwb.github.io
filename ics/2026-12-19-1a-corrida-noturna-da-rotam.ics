@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-19-1a-corrida-noturna-da-rotam@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:1ª Corrida Noturna da ROTAM
+DESCRIPTION:1ª Corrida Noturna da ROTAM\nLapa · 7K\nHorário de largada a
+  confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.b
+ r/e/e-88407\n\nConfirme data\, horário e local no site oficial do organiz
+ ador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Museu de Armas Osíris Stenghel Guimarães (Alameda David Carneiro
+ \, 380)\, Lapa - PR
+URL:https://www.ticketsports.com.br/e/e-88407
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:1ª Corrida Noturna da ROTAM
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

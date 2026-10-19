@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-01-8a-corrida-do-fogo-inscricoes@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Último dia de inscrições · 8ª Corrida do Fogo
+DESCRIPTION:Último dia para se inscrever em 8ª Corrida do Fogo (01/11\, C
+ uritiba).\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.br/
+ e/e-88021\n\nConfirme o prazo no site oficial do organizador.\nRun Hub CWB
+  · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88021
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 8ª Corrida do Fogo
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

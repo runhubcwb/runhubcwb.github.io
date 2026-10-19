@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-trail-in-motion-19-chacara-da-bolinha-inscricoes@runhubcwb.g
+ ithub.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:Último dia de inscrições · Trail in Motion 19 · Chácara da Bo
+ linha
+DESCRIPTION:Último dia para se inscrever em Trail in Motion 19 · Chácara
+  da Bolinha (13/12\, Campina Grande do Sul).\n\nInscrições: Ticket Sport
+ s\nhttps://www.ticketsports.com.br/e/e-88414\n\nConfirme o prazo no site o
+ ficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88414
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Trail in Motion 19 · Chácara d
+ a Bolinha
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

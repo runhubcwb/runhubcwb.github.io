@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-trail-in-motion-19-chacara-da-bolinha@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Trail in Motion 19 · Chácara da Bolinha
+DESCRIPTION:Trail in Motion 19 · Chácara da Bolinha\nCampina Grande do Su
+ l · 15K · 10K · 5K\nHorário de largada a confirmar.\n\nInscrições: T
+ icket Sports\nhttps://www.ticketsports.com.br/e/e-88414\n\nConfirme data\,
+  horário e local no site oficial do organizador.\nRun Hub CWB · runhubcw
+ b.github.io
+LOCATION:Chácara da Bolinha (Estrada Mun. João Vicente dos Santos\, 3900\
+ , Lagoa Vermelha)\, Campina Grande do Sul - PR
+URL:https://www.ticketsports.com.br/e/e-88414
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Trail in Motion 19 · Chácara da Bolinha
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-1a-corrida-rustica-rota-do-manancial-inscricoes@runhubcwb.gi
+ thub.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+SUMMARY:Último dia de inscrições · 1ª Corrida Rústica Rota do Mananci
+ al
+DESCRIPTION:Último dia para se inscrever em 1ª Corrida Rústica Rota do M
+ anancial (13/12\, Piraquara).\n\nInscrições: Ticket Sports\nhttps://www.
+ ticketsports.com.br/e/e-88436\n\nConfirme o prazo no site oficial do organ
+ izador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88436
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 1ª Corrida Rústica Rota do Man
+ ancial
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

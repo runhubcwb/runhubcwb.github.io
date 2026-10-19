@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-corrida-de-rua-e-caminhada-de-araucaria@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Corrida de Rua e Caminhada de Araucária
+DESCRIPTION:Corrida de Rua e Caminhada de Araucária\nAraucária · 5K\nHor
+ ário de largada a confirmar.\n\nInscrições: Assessocor\nhttps://app.ass
+ essocor.online/evento/corrida-e-caminhada-de-araucaria/932\n\nConfirme dat
+ a\, horário e local no site oficial do organizador.\nRun Hub CWB · runhu
+ bcwb.github.io
+LOCATION:Praça da Bíblia\, Araucária - PR
+URL:https://app.assessocor.online/evento/corrida-e-caminhada-de-araucaria/9
+ 32
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida de Rua e Caminhada de Araucária
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

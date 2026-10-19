@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-01-lupo-sports-corre-curitiba@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:Lupo Sports Corre Curitiba
+DESCRIPTION:Lupo Sports Corre Curitiba\nCuritiba · 10K · 5K\nHorário de 
+ largada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ticketspo
+ rts.com.br/e/e-87665\n\nConfirme data\, horário e local no site oficial d
+ o organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Arena Ítalo Barigui (R. Prof. Pedro Viriato Parigot de Souza\, 56
+ 5\, Mossunguê)\, Curitiba - PR
+URL:https://www.ticketsports.com.br/e/e-87665
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Lupo Sports Corre Curitiba
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

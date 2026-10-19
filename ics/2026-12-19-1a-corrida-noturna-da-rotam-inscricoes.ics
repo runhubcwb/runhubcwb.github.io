@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-19-1a-corrida-noturna-da-rotam-inscricoes@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Último dia de inscrições · 1ª Corrida Noturna da ROTAM
+DESCRIPTION:Último dia para se inscrever em 1ª Corrida Noturna da ROTAM (
+ 19/12\, Lapa).\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.co
+ m.br/e/e-88407\n\nConfirme o prazo no site oficial do organizador.\nRun Hu
+ b CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88407
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 1ª Corrida Noturna da ROTAM
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-08-circuito-eco-run-campo-largo@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+SUMMARY:Circuito Eco Run · Campo Largo
+DESCRIPTION:Circuito Eco Run · Campo Largo\nCampo Largo · 10K · 5K\nHor
+ ário de largada a confirmar.\n\nInscrições: site oficial da prova\nhttp
+ s://ecorun.com.br/campo-largo/unica\n\nConfirme data\, horário e local no
+  site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Campo Largo - PR
+URL:https://ecorun.com.br/campo-largo/unica
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Circuito Eco Run · Campo Largo
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

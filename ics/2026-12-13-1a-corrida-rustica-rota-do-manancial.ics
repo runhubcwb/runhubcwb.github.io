@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-1a-corrida-rustica-rota-do-manancial@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:1ª Corrida Rústica Rota do Manancial
+DESCRIPTION:1ª Corrida Rústica Rota do Manancial\nPiraquara · 10K\nHorá
+ rio de largada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ti
+ cketsports.com.br/e/e-88436\n\nConfirme data\, horário e local no site of
+ icial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Campo de Futebol Pedrinho Jess (Estrada do Botiatuva\, Laranjeira)
+ \, Piraquara - PR
+URL:https://www.ticketsports.com.br/e/e-88436
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:1ª Corrida Rústica Rota do Manancial
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

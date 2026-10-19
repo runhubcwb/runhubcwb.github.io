@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-01-corrida-e-caminhada-com-a-mae-do-rocio-inscricoes@runhubcwb.
+ github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:Último dia de inscrições · Corrida e Caminhada com a Mãe do Ro
+ cio
+DESCRIPTION:Último dia para se inscrever em Corrida e Caminhada com a Mãe
+  do Rocio (01/11\, Paranaguá).\n\nInscrições: Ticket Sports\nhttps://ww
+ w.ticketsports.com.br/e/e-86643\n\nConfirme o prazo no site oficial do org
+ anizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-86643
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Corrida e Caminhada com a Mãe d
+ o Rocio
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

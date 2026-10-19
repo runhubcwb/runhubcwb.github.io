@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-1a-corrida-guardioes-dos-mananciais@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:1ª Corrida Guardiões dos Mananciais
+DESCRIPTION:1ª Corrida Guardiões dos Mananciais\nPiraquara · 5K\nHorári
+ o de largada a confirmar.\n\nInscrições: Assessocor\nhttps://app.assesso
+ cor.online/evento/corrida-do-29o-bpm-piraquara/913\n\nConfirme data\, hor
+ ário e local no site oficial do organizador.\nRun Hub CWB · runhubcwb.gi
+ thub.io
+LOCATION:29º Batalhão de Polícia Militar\, Piraquara - PR
+URL:https://app.assessocor.online/evento/corrida-do-29o-bpm-piraquara/913
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:1ª Corrida Guardiões dos Mananciais
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

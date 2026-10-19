@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-braves-mud-race-obstaculos@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Braves Mud Race (obstáculos)
+DESCRIPTION:Braves Mud Race (obstáculos)\nSão José dos Pinhais · 8K · 
+ 6K\nHorário de largada a confirmar.\n\nInscrições: GoPanda\nhttps://www
+ .gopanda.com.br/tickets/desafio-braves-novembro-2026\n\nConfirme data\, ho
+ rário e local no site oficial do organizador.\nRun Hub CWB · runhubcwb.g
+ ithub.io
+LOCATION:R. Maria da Luz Costa\, 210\, Contenda\, São José dos Pinhais - 
+ PR
+URL:https://www.gopanda.com.br/tickets/desafio-braves-novembro-2026
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Braves Mud Race (obstáculos)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

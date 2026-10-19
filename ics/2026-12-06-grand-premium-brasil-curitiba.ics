@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-grand-premium-brasil-curitiba@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Grand Premium Brasil · Curitiba
+DESCRIPTION:Grand Premium Brasil · Curitiba\nCuritiba · 15K · 10K · 5K 
+ · 3K\nHorário de largada a confirmar.\n\nInscrições: Minhas Inscriçõ
+ es\nhttps://minhasinscricoes.com.br/Evento/CorridaGPBrasil2026-Parana\n\nC
+ onfirme data\, horário e local no site oficial do organizador.\nRun Hub C
+ WB · runhubcwb.github.io
+LOCATION:Praça Nossa Senhora de Salette (Centro Cívico)\, Curitiba - PR
+URL:https://minhasinscricoes.com.br/Evento/CorridaGPBrasil2026-Parana
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Grand Premium Brasil · Curitiba
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

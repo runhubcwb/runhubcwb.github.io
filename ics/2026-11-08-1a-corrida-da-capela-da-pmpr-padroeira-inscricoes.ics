@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-08-1a-corrida-da-capela-da-pmpr-padroeira-inscricoes@runhubcwb.
+ github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:Último dia de inscrições · 1ª Corrida da Capela da PMPR (Padro
+ eira)
+DESCRIPTION:Último dia para se inscrever em 1ª Corrida da Capela da PMPR 
+ (Padroeira) (08/11\, Curitiba).\n\nInscrições: Ticket Sports\nhttps://ww
+ w.ticketsports.com.br/e/1-Corrida-da-Capela-da-PMPR-88413\n\nConfirme o pr
+ azo no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/1-Corrida-da-Capela-da-PMPR-88413
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 1ª Corrida da Capela da PMPR (P
+ adroeira)
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-corrida-do-noel@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Corrida do Noel
+DESCRIPTION:Corrida do Noel\nParanaguá · 4K\nHorário de largada a confir
+ mar.\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.br/e/e-8
+ 6878\n\nConfirme data\, horário e local no site oficial do organizador.\n
+ Run Hub CWB · runhubcwb.github.io
+LOCATION:Paranaguá - PR
+URL:https://www.ticketsports.com.br/e/e-86878
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida do Noel
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

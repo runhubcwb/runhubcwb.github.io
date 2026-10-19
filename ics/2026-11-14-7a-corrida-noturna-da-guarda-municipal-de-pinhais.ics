@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-14-7a-corrida-noturna-da-guarda-municipal-de-pinhais@runhubcwb.
+ github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:7ª Corrida Noturna da Guarda Municipal de Pinhais
+DESCRIPTION:7ª Corrida Noturna da Guarda Municipal de Pinhais\nPinhais · 
+ 10K · 5K\nHorário de largada a confirmar.\n\nInscrições: Assessocor\nh
+ ttps://app.assessocor.online/evento/corrida-da-guarda-municipal-de-pinhais
+ /916\n\nConfirme data\, horário e local no site oficial do organizador.\n
+ Run Hub CWB · runhubcwb.github.io
+LOCATION:Sede da Guarda Municipal de Pinhais\, Pinhais - PR
+URL:https://app.assessocor.online/evento/corrida-da-guarda-municipal-de-pin
+ hais/916
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:7ª Corrida Noturna da Guarda Municipal de Pinhais
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

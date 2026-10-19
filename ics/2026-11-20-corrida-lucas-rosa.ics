@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-20-corrida-lucas-rosa@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Corrida Lucas Rosa
+DESCRIPTION:Corrida Lucas Rosa\nAraucária · 5K\nHorário de largada a con
+ firmar.\n\nInscrições: Assessocor\nhttps://app.assessocor.online/evento/
+ corrida-lucas-rosa/908\n\nConfirme data\, horário e local no site oficial
+  do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Pista de corrida do CSU (Centro Social Urbano)\, Araucária - PR
+URL:https://app.assessocor.online/evento/corrida-lucas-rosa/908
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida Lucas Rosa
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

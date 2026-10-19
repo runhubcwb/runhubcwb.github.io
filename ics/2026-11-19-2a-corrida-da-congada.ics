@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-19-2a-corrida-da-congada@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:2ª Corrida da Congada
+DESCRIPTION:2ª Corrida da Congada\nLapa · 7K\nHorário de largada a confi
+ rmar.\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.br/e/e-
+ 88073\n\nConfirme data\, horário e local no site oficial do organizador.\
+ nRun Hub CWB · runhubcwb.github.io
+LOCATION:R. Barão do Rio Branco\, 1960\, Centro (Clube Recreativo 7 de Set
+ embro)\, Lapa - PR
+URL:https://www.ticketsports.com.br/e/e-88073
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2ª Corrida da Congada
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

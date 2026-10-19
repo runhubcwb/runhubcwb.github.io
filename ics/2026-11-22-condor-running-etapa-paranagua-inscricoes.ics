@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-22-condor-running-etapa-paranagua-inscricoes@runhubcwb.github.i
+ o
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:Último dia de inscrições · Condor Running · Etapa Paranaguá
+DESCRIPTION:Último dia para se inscrever em Condor Running · Etapa Parana
+ guá (22/11\, Paranaguá).\n\nInscrições: Ticket Sports\nhttps://www.tic
+ ketsports.com.br/e/e-87015\n\nConfirme o prazo no site oficial do organiza
+ dor.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-87015
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Condor Running · Etapa Paranagu
+ á
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

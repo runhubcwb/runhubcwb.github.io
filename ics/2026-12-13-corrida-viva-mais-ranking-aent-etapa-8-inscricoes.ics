@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-corrida-viva-mais-ranking-aent-etapa-8-inscricoes@runhubcwb.
+ github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+SUMMARY:Último dia de inscrições · Corrida Viva Mais (Ranking AENT Etap
+ a 8)
+DESCRIPTION:Último dia para se inscrever em Corrida Viva Mais (Ranking AEN
+ T Etapa 8) (13/12\, Curitiba).\n\nInscrições: Ticket Sports\nhttps://www
+ .ticketsports.com.br/e/e-88719\n\nConfirme o prazo no site oficial do orga
+ nizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88719
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Corrida Viva Mais (Ranking AENT 
+ Etapa 8)
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

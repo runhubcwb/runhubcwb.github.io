@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-3a-corrida-e-caminhada-da-oab-colombo@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:3ª Corrida e Caminhada da OAB Colombo
+DESCRIPTION:3ª Corrida e Caminhada da OAB Colombo\nColombo · 5K\nHorário
+  de largada a confirmar.\n\nInscrições: Sympla\nhttps://www.sympla.com.b
+ r/evento/3-corrida-e-caminha-da-oab-colombo/3543638\n\nConfirme data\, hor
+ ário e local no site oficial do organizador.\nRun Hub CWB · runhubcwb.gi
+ thub.io
+LOCATION:Bosque da Uva\, Colombo - PR
+URL:https://www.sympla.com.br/evento/3-corrida-e-caminha-da-oab-colombo/354
+ 3638
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:3ª Corrida e Caminhada da OAB Colombo
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

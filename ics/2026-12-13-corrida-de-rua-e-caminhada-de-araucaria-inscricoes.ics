@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-corrida-de-rua-e-caminhada-de-araucaria-inscricoes@runhubcwb
+ .github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Último dia de inscrições · Corrida de Rua e Caminhada de Arauc
+ ária
+DESCRIPTION:Último dia para se inscrever em Corrida de Rua e Caminhada de 
+ Araucária (13/12\, Araucária).\n\nInscrições: Assessocor\nhttps://app.
+ assessocor.online/evento/corrida-e-caminhada-de-araucaria/932\n\nConfirme 
+ o prazo no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.i
+ o
+URL:https://app.assessocor.online/evento/corrida-e-caminhada-de-araucaria/9
+ 32
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Corrida de Rua e Caminhada de Ar
+ aucária
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

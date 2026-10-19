@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-20-firefighters-night-run-3a-edicao@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Firefighters Night Run · 3ª Edição
+DESCRIPTION:Firefighters Night Run · 3ª Edição\nSão José dos Pinhais 
+ · 6K\nHorário de largada a confirmar.\n\nInscrições: Assessocor\nhttps
+ ://app.assessocor.online/evento/firefighters-night-run/934\n\nConfirme dat
+ a\, horário e local no site oficial do organizador.\nRun Hub CWB · runhu
+ bcwb.github.io
+LOCATION:6º Grupamento de Bombeiros (Av. Rui Barbosa\, 4995\, Iná)\, São
+  José dos Pinhais - PR
+URL:https://app.assessocor.online/evento/firefighters-night-run/934
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Firefighters Night Run · 3ª Edição
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

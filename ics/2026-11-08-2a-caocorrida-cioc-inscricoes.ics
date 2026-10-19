@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-08-2a-caocorrida-cioc-inscricoes@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:Último dia de inscrições · 2ª Cãocorrida CIOC
+DESCRIPTION:Último dia para se inscrever em 2ª Cãocorrida CIOC (08/11\, 
+ São José dos Pinhais).\n\nInscrições: Assessocor\nhttps://app.assessoc
+ or.online/evento/caocorrida-cioc/865\n\nConfirme o prazo no site oficial d
+ o organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://app.assessocor.online/evento/caocorrida-cioc/865
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 2ª Cãocorrida CIOC
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

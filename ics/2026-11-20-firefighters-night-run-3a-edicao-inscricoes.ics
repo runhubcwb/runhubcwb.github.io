@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-20-firefighters-night-run-3a-edicao-inscricoes@runhubcwb.github
+ .io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Último dia de inscrições · Firefighters Night Run · 3ª Ediç
+ ão
+DESCRIPTION:Último dia para se inscrever em Firefighters Night Run · 3ª 
+ Edição (20/11\, São José dos Pinhais).\n\nInscrições: Assessocor\nht
+ tps://app.assessocor.online/evento/firefighters-night-run/934\n\nConfirme 
+ o prazo no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.i
+ o
+URL:https://app.assessocor.online/evento/firefighters-night-run/934
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Firefighters Night Run · 3ª Ed
+ ição
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

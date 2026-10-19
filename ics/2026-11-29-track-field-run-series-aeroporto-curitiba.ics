@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-29-track-field-run-series-aeroporto-curitiba@runhubcwb.github.i
+ o
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Track&Field Run Series · Aeroporto Curitiba
+DESCRIPTION:Track&Field Run Series · Aeroporto Curitiba\nSão José dos Pi
+ nhais · 10K · 5K\nHorário de largada a confirmar.\n\nInscrições: TF S
+ ports\nhttps://www.tfsports.com.br/run-series/motiva-aeroportos-curitiba-2
+ 026/\n\nConfirme data\, horário e local no site oficial do organizador.\n
+ Run Hub CWB · runhubcwb.github.io
+LOCATION:Aeroporto de Curitiba (área restrita\, Motiva Aeroportos)\, São 
+ José dos Pinhais - PR
+URL:https://www.tfsports.com.br/run-series/motiva-aeroportos-curitiba-2026/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Track&Field Run Series · Aeroporto Curitiba
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

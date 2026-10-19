@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-1a-corrida-mundo-de-yasmin-inscricoes@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:Último dia de inscrições · 1ª Corrida Mundo de Yasmin
+DESCRIPTION:Último dia para se inscrever em 1ª Corrida Mundo de Yasmin (1
+ 3/12\, Campo Largo).\n\nInscrições: PDK Sports\nhttps://www.pdksports.co
+ m.br/evento/1a-corrida-mundo-de-yasmin/90\n\nConfirme o prazo no site ofic
+ ial do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.pdksports.com.br/evento/1a-corrida-mundo-de-yasmin/90
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 1ª Corrida Mundo de Yasmin
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

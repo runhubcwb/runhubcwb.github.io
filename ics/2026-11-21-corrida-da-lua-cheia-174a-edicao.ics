@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-21-corrida-da-lua-cheia-174a-edicao@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Corrida da Lua Cheia (174ª edição)
+DESCRIPTION:Corrida da Lua Cheia (174ª edição)\nColombo · 8K · 4K\nHor
+ ário de largada a confirmar.\n\nInscrições: Assessocor\nhttps://app.ass
+ essocor.online/evento/circuito-da-lua-cheia-2026-174o-edicao/930\n\nConfir
+ me data\, horário e local no site oficial do organizador.\nRun Hub CWB ·
+  runhubcwb.github.io
+LOCATION:Bosque da Uva\, Colombo - PR
+URL:https://app.assessocor.online/evento/circuito-da-lua-cheia-2026-174o-ed
+ icao/930
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida da Lua Cheia (174ª edição)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

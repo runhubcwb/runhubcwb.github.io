@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-2a-corrida-da-serra-verde-express-inscricoes@runhubcwb.githu
+ b.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Último dia de inscrições · 2ª Corrida da Serra Verde Express
+DESCRIPTION:Último dia para se inscrever em 2ª Corrida da Serra Verde Exp
+ ress (13/12\, Morretes).\n\nInscrições: Assessocor\nhttps://app.assessoc
+ or.online/evento/serra-verde-express/905\n\nConfirme o prazo no site ofici
+ al do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://app.assessocor.online/evento/serra-verde-express/905
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 2ª Corrida da Serra Verde Expre
+ ss
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

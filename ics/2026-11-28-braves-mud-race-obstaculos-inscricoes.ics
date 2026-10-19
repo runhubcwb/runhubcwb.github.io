@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-braves-mud-race-obstaculos-inscricoes@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Último dia de inscrições · Braves Mud Race (obstáculos)
+DESCRIPTION:Último dia para se inscrever em Braves Mud Race (obstáculos) 
+ (28/11\, São José dos Pinhais).\n\nInscrições: GoPanda\nhttps://www.go
+ panda.com.br/tickets/desafio-braves-novembro-2026\n\nConfirme o prazo no s
+ ite oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.gopanda.com.br/tickets/desafio-braves-novembro-2026
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Braves Mud Race (obstáculos)
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

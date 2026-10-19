@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-10-30-7a-corrida-noturna-da-gma-patrulha-maria-da-penha-inscricoes
+ @runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:Último dia de inscrições · 7ª Corrida Noturna da GMA · Patrul
+ ha Maria da Penha
+DESCRIPTION:Último dia para se inscrever em 7ª Corrida Noturna da GMA · 
+ Patrulha Maria da Penha (30/10\, Araucária).\n\nInscrições: Ticket Spor
+ ts\nhttps://www.ticketsports.com.br/e/e-88727\n\nConfirme o prazo no site 
+ oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88727
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 7ª Corrida Noturna da GMA · Pa
+ trulha Maria da Penha
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

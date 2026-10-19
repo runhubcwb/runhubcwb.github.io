@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-10-24-1a-pib-run@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:1ª PIB Run
+DESCRIPTION:1ª PIB Run\nCampo Largo · 5K\nHorário de largada a confirmar
+ .\n\nInscrições: PDK Sports\nhttps://www.pdksports.com.br/evento/1a-edic
+ ao-da-pib-run-campo-largo/89\n\nConfirme data\, horário e local no site o
+ ficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Sede da Igreja PIB (BR-277\, 1770)\, Campo Largo - PR
+URL:https://www.pdksports.com.br/evento/1a-edicao-da-pib-run-campo-largo/89
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:1ª PIB Run
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

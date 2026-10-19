@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-31-3a-corrida-da-virada@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:3ª Corrida da Virada
+DESCRIPTION:3ª Corrida da Virada\nMatinhos · 10K · 5K\nHorário de larga
+ da a confirmar.\n\nInscrições: Triativa Eventos\nhttps://triativaeventos
+ .com.br/prova/3a-corrida-da-virada-matinhos-pr/636\n\nConfirme data\, hor
+ ário e local no site oficial do organizador.\nRun Hub CWB · runhubcwb.gi
+ thub.io
+LOCATION:Orla de Matinhos\, Matinhos - PR
+URL:https://triativaeventos.com.br/prova/3a-corrida-da-virada-matinhos-pr/6
+ 36
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:3ª Corrida da Virada
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

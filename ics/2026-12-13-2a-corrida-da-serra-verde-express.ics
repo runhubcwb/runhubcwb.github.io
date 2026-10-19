@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-2a-corrida-da-serra-verde-express@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:2ª Corrida da Serra Verde Express
+DESCRIPTION:2ª Corrida da Serra Verde Express\nMorretes · 10K · 6K\nHor
+ ário de largada a confirmar.\n\nInscrições: Assessocor\nhttps://app.ass
+ essocor.online/evento/serra-verde-express/905\n\nConfirme data\, horário 
+ e local no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.i
+ o
+LOCATION:Morretes - PR
+URL:https://app.assessocor.online/evento/serra-verde-express/905
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2ª Corrida da Serra Verde Express
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

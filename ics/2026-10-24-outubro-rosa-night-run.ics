@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-10-24-outubro-rosa-night-run@runhubcwb.github.io
+DTSTAMP:20261019T120000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Outubro Rosa Night Run
+DESCRIPTION:Outubro Rosa Night Run\nPiraquara · 5K\nHorário de largada a 
+ confirmar.\n\nInscrições: Assessocor\nhttps://app.assessocor.online/even
+ to/outubro-rosa-night-run/918\n\nConfirme data\, horário e local no site 
+ oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Travessa Deodoro (estacionamento ao lado da Prefeitura)\, Piraquar
+ a - PR
+URL:https://app.assessocor.online/evento/outubro-rosa-night-run/918
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Outubro Rosa Night Run
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
