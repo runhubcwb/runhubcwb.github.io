@@ -71,7 +71,7 @@
   function run(){
     const d=dsel.value,g=(document.querySelector('input[name="c-g"]:checked')||{}).value||'M',raw=tin.value.trim(),t=parseTime(raw);
     hint.classList.toggle('err',!!raw&&!t);hint.textContent=raw&&!t?'Formato inválido: use mm:ss (ex.: 36:00) ou h:mm:ss (ex.: 1:45:30)':'Formato mm:ss ou h:mm:ss';
-    if(!t){out.innerHTML='<p class="c-empty">Digite seu tempo para comparar com o top 5 de cada prova.</p>';return;}
+    if(!t){out.innerHTML='<p class="c-empty">Digite seu tempo para comparar com o top 5 de cada prova.</p>';if(root.RHCard)root.RHCard.calcReady(null);return;}
     const races=DATA.filter(r=>r.dist===d);
     const km=races.length?races[0].km:distKm(d);
     let h=`<div class="c-pace"><b>${pace(t,km)}</b><span>min/km · seu pace nos ${esc(d)}</span></div>`;
@@ -79,6 +79,16 @@
     else h+='<ul class="c-list">'+races.map(r=>{const e=evaluate(r,t,g),x=describe(r,e,g);
       return `<li class="c-res${e.inTop5?' in':''}"><h4>${esc(r.curto)} ${esc(r.dist)} <small>· ${esc(r.data)} · ${esc(r.cidade)}${r.mod?' · '+esc(r.mod):''}</small></h4><p class="c-pos">${x.pos}</p><p class="c-diff">${x.diff}</p><p class="c-src">${esc(x.src)}</p></li>`;}).join('')+'</ul>';
     out.innerHTML=h;
+    // melhor comparação para o card dos stories
+    let best=null;
+    races.forEach(r=>{const e=evaluate(r,t,g);const k=e.inTop5?[0,e.pos]:[1,e.diff];if(!best||k[0]<best.k[0]||(k[0]===best.k[0]&&k[1]<best.k[1]))best={k,r,e};});
+    let line='',src='';
+    if(best){const r=best.r,e=best.e,nm=`${r.curto} ${r.dist}`;
+      line=e.inTop5?`Eu seria o ${e.pos}º ${GL[g]} da ${nm}`:`Faltaram ${fmt(e.diff)} pro top 5 ${GL[g]} da ${nm}`;
+      src=`Comparação com ${e.kind==='exact'?'a lista completa':'o top 5 oficial'} · ${r.plat} · ${r.data}${r.parcial?' · resultado parcial':''}`;}
+    const info={dist:d,time:fmt(t),pace:pace(t,km),line,src};
+    root.RHLastCalc=info;
+    if(root.RHCard)root.RHCard.calcReady(info);
   }
   [dsel,tin].forEach(el=>el.addEventListener('input',run));dsel.addEventListener('change',run);
   document.querySelectorAll('input[name="c-g"]').forEach(r=>r.addEventListener('change',run));

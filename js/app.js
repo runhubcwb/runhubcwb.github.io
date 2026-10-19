@@ -39,3 +39,22 @@
     $$('.fchips .fchip').forEach(b=>b.addEventListener('click',()=>{$$('.fchips .fchip').forEach(x=>x.classList.remove('on'));b.classList.add('on');dist=b.dataset.d;apply();}));
   }
 })();
+/* Minha temporada: armazenamento local (só neste aparelho) + estrelas + contador no menu */
+(function(){
+  const KEY='rh-temporada-v1';
+  function read(){try{const v=JSON.parse(localStorage.getItem(KEY)||'{}');return v&&typeof v==='object'&&!Array.isArray(v)?v:{};}catch(e){return {};}}
+  function write(v){try{localStorage.setItem(KEY,JSON.stringify(v));}catch(e){}document.dispatchEvent(new CustomEvent('rh-season'));}
+  let RACES={};const el=document.getElementById('rh-races');
+  if(el)try{JSON.parse(el.textContent).forEach(r=>RACES[r.id]=r);}catch(e){}
+  const S={all:read,has:id=>id in read(),races:RACES,
+    toggle(id){const v=read();if(v[id])delete v[id];else{const r=RACES[id];if(!r)return;v[id]={n:r.n,d:r.d,c:r.c,dist:r.dist};}write(v);},
+    remove(id){const v=read();delete v[id];write(v);}};
+  window.RHSeason=S;
+  function sync(){
+    const v=read(),t=new Date(),ti=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0'),n=Object.values(v).filter(r=>r&&r.d>=ti).length,b=document.getElementById('season-badge');
+    if(b){b.textContent=n;b.hidden=n===0;}
+    document.querySelectorAll('.star').forEach(s=>{const on=s.dataset.id in v;s.classList.toggle('on',on);s.setAttribute('aria-pressed',on);s.querySelector('span').textContent='Vou correr';});
+  }
+  document.addEventListener('click',e=>{const s=e.target.closest('.star');if(s){e.preventDefault();S.toggle(s.dataset.id);}});
+  document.addEventListener('rh-season',sync);window.addEventListener('storage',sync);sync();
+})();
