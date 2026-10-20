@@ -403,6 +403,27 @@ html.sc-lock{overflow:hidden}
 #rh-list.mode-list .race.open{border-color:#55555c}
 @media(max-width:520px){#rh-list.mode-list .race.open>.body{padding:2px 14px 14px}}
 .s-card .rsum{display:none}
+/* Mais rápidos do mês */
+.rk-bar{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin-bottom:14px}
+.rk-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.rk-tab{font:inherit;font-family:"Bebas Neue",Impact,sans-serif;font-size:22px;letter-spacing:.04em;padding:8px 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--iv);cursor:pointer;min-height:44px}
+.rk-tab[aria-selected=true]{background:var(--co);border-color:var(--co);color:#1C1C1E}
+.rk-meta{color:var(--mut);font-size:13px;margin-bottom:18px}
+.rk-cols{display:grid;gap:22px}
+.rk-col{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.rk-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.rk-h h3{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.rk-list{list-style:none;display:grid;gap:8px}
+.rk-list li{display:grid;grid-template-columns:34px 1fr auto 40px;gap:8px;align-items:center;padding:10px 6px 10px 12px;border:1.5px solid transparent;border-radius:12px;background:var(--bg)}
+.rk-list li.gold{border-color:var(--gold)}.rk-list li.silver{border-color:var(--silver)}.rk-list li.bronze{border-color:var(--bronze)}
+.rk-list .pos{font-weight:800;color:var(--mut)}
+.rk-list .nm{font-weight:700;font-size:14px;line-height:1.25;min-width:0;overflow-wrap:anywhere}
+.rk-list .nm small{display:block;font-weight:600;font-size:11px;color:var(--mut);margin-top:2px}
+.rk-list .t{font-family:"Bebas Neue",Impact,sans-serif;font-size:24px;letter-spacing:.02em}
+.rk-sh{width:40px;height:40px;display:grid;place-items:center;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--iv);cursor:pointer}
+.rk-sh svg{width:18px;height:18px}.rk-sh:hover{border-color:var(--co);color:var(--co)}
+.rk-foot{margin-top:22px;line-height:1.6}
+@media(min-width:900px){.rk-cols{grid-template-columns:1fr 1fr}}
 
 @media (min-width:720px){
   .calc-grid{grid-template-columns:1.35fr 1fr;align-items:start}
