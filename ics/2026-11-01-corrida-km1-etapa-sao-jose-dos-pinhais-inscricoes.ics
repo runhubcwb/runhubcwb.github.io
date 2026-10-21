@@ -6,7 +6,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-01-corrida-km1-etapa-sao-jose-dos-pinhais-inscricoes@runhubcwb.
  github.io
-DTSTAMP:20261020T120000Z
+DTSTAMP:20261021T120000Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Último dia de inscrições · Corrida Km1 · Etapa São José dos 

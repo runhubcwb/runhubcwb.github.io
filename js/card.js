@@ -138,6 +138,32 @@
 
   // ---------- modal compartilhar / baixar ----------
   let modal;
+  function drawMundo(d,logo){ // d.mode: 'caminho' | 'indice'
+    const c=canvas(),x=c.getContext('2d');base(x,logo,240);x.textAlign='center';
+    const MS3=['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
+    function row(y,h,day,mon,t1,t2,hl,ok){rr(x,M,y,W-2*M,h,26);x.fillStyle=C.bg2;x.fill();x.lineWidth=3;x.strokeStyle=hl?C.co:ok?C.gold:C.line;x.stroke();
+      const tx=day!=null?M+165:M+44,tw=W-M-36-tx;
+      if(day!=null){x.textAlign='center';x.fillStyle=C.iv;x.font=`400 72px ${BB}`;x.fillText(day,M+80,y+h/2+12);x.fillStyle=C.co;x.font=`800 22px ${MS}`;x.fillText(mon,M+80,y+h/2+44);}
+      x.textAlign='left';x.fillStyle=C.iv;x.fillText(fit(x,t1,tw,36,26,s=>`800 ${s}px ${MS}`),tx,y+h/2-6);
+      x.fillStyle=hl?C.co:C.mut;x.fillText(fit(x,t2,tw,26,20,s=>`600 ${s}px ${MS}`),tx,y+h/2+36);}
+    if(d.mode==='caminho'){
+      eyebrow(x,'Minhas provas até',350);
+      x.fillStyle=C.iv;x.font=`400 ${d.alvo.length>12?120:170}px ${BB}`;x.fillText(fit(x,d.alvo.toUpperCase(),W-2*M,d.alvo.length>12?120:170,80,s=>`400 ${s}px ${BB}`),W/2,d.alvo.length>12?490:520);
+      x.fillStyle=C.mut;x.font=`600 30px ${MS}`;x.fillText(fit(x,`${d.nome} · ${d.d.slice(8,10)}/${d.d.slice(5,7)}/${d.d.slice(0,4)}`,W-2*M,30,22,s=>`600 ${s}px ${MS}`),W/2,580);
+      let y=640;const h=124;
+      if(!d.races.length){x.fillStyle=C.mut;x.font=`600 30px ${MS}`;x.fillText('Provas do calendário em breve',W/2,y+60);y+=120;}
+      d.races.forEach(r=>{row(y,h,r.d.slice(8,10),MS3[+r.d.slice(5,7)-1],r.n,`${r.c}${r.dist.length?' · '+r.dist.join(' · '):''}`,false);y+=h+16;});
+      if(d.total>d.races.length){x.textAlign='center';x.fillStyle=C.mut;x.font=`700 28px ${MS}`;x.fillText(`+ ${d.total-d.races.length} ${d.total-d.races.length===1?'prova':'provas'}`,W/2,y+20);y+=50;}
+      row(y,h+6,d.d.slice(8,10),MS3[+d.d.slice(5,7)-1],d.nome,d.falta>1?`faltam ${d.falta} dias`:d.falta===1?'é amanhã':'é hoje!',true);
+    }else{
+      eyebrow(x,d.dist==='21K'?'Meu índice · meia maratona':'Meu índice · maratona',350);
+      x.fillStyle=C.iv;x.font=`400 190px ${BB}`;x.fillText(d.t,W/2,540);
+      x.fillStyle=C.mut;x.font=`600 30px ${MS}`;x.fillText(`${d.g==='F'?'Feminino':'Masculino'} · índices oficiais 2027`,W/2,600);
+      let y=670;const h=136,rows=d.rows.slice(0,6);
+      rows.forEach(r=>{row(y,h,null,'',r.nome,r.ok?`✓ Tenho o índice · sobram ${r.gap}`:`Faltam ${r.gap} · índice ${r.std}`,false,r.ok);y+=h+20;});
+    }
+    x.textAlign='center';footer(x);return c;
+  }
   function open(c,fname,title,text){
     if(!modal){modal=document.createElement('div');modal.className='sc-modal';modal.hidden=true;modal.innerHTML='<div class="sc-box" role="dialog" aria-modal="true" aria-label="Card para os stories"><button class="sc-x" type="button" aria-label="Fechar">✕</button><p class="eyebrow">Card para os stories</p><img alt=""><div class="sc-acts"><button class="btn sc-share" type="button" hidden>Compartilhar ↗</button><a class="btn btn-ghost sc-dl">Baixar imagem ↓</a></div><p class="sc-tip">1080 × 1920 px · pronto pros stories do Instagram</p></div>';
       document.body.appendChild(modal);modal.addEventListener('click',e=>{if(e.target===modal||e.target.closest('.sc-x'))close();});document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});}
@@ -152,12 +178,13 @@
   }
   function close(){if(modal){modal.hidden=true;document.documentElement.classList.remove('sc-lock');}}
   const API={
-    render(kind,data){return prep().then(l=>({calc:drawCalc,season:drawSeason,top5:drawTop5,top10:drawTop10,rank:drawRank})[kind](data,l));},
+    render(kind,data){return prep().then(l=>({calc:drawCalc,season:drawSeason,top5:drawTop5,top10:drawTop10,rank:drawRank,mundo:drawMundo})[kind](data,l));},
     openCalc(d){return API.render('calc',d).then(c=>open(c,`runhubcwb-${d.dist.toLowerCase()}-${d.time.replace(/:/g,'')}.png`,`Meu ${d.dist}: ${d.time}`,`Meu ${d.dist}: ${d.time} (${d.pace}/km). ${d.line||''} · runhubcwb.github.io`));},
     openSeason(list){return API.render('season',list).then(c=>open(c,'runhubcwb-minha-temporada.png','Minha temporada','Minha temporada de corridas · runhubcwb.github.io'));},
     openTop5(id){const p=PODIUM[id];if(!p)return;return API.render('top5',p).then(c=>open(c,`runhubcwb-top5-${id}.png`,`Top 5 · ${p.nome}`,`Top 5 da ${p.nome} ${p.dist} · runhubcwb.github.io`));},
     openTop10(d){return API.render('top10',d).then(c=>open(c,`runhubcwb-mais-rapidos-${d.mid}-${d.dist.toLowerCase()}-${d.g.toLowerCase()}.png`,`Mais rápidos de ${d.mes} · ${d.dist}`,`Top 10 ${d.dist} ${d.g==='F'?'feminino':'masculino'} de ${d.mes} em Curitiba, RMC e litoral · runhubcwb.github.io`));},
     openRank(d){return API.render('rank',d).then(c=>open(c,`runhubcwb-${d.pos}o-${d.dist.toLowerCase()}-${d.mid}.png`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.mes} · ${d.dist}`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.mes} no ${d.dist}: ${d.t} · runhubcwb.github.io`));},
+    openMundo(d){return API.render('mundo',d).then(c=>open(c,d.mode==='caminho'?`runhubcwb-provas-ate-${d.alvo.toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g,'-')}.png`:'runhubcwb-meu-indice.png',d.mode==='caminho'?`Minhas provas até ${d.alvo}`:`Meu índice: ${d.t}`,d.mode==='caminho'?`Minhas provas até ${d.alvo} · runhubcwb.github.io/mundo.html`:`Meu índice para as majors: ${d.t} · runhubcwb.github.io/mundo.html`));},
     calcReady(d){const b=document.getElementById('share-box');if(!b)return;
       if(!d){b.hidden=true;b.innerHTML='';return;}
       b.hidden=false;b.innerHTML=`<div class="sb-in"><p><b>Mostra pra galera:</b> gere um card com seu tempo, pace e a comparação com o top 5.</p><button class="btn" type="button" id="sb-go">Gerar card pros stories ↗</button></div>`;
