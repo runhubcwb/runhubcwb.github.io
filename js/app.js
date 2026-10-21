@@ -51,8 +51,8 @@
     remove(id){const v=read();delete v[id];write(v);}};
   window.RHSeason=S;
   function sync(){
-    const v=read(),t=new Date(),ti=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0'),n=Object.values(v).filter(r=>r&&r.d>=ti).length,b=document.getElementById('season-badge');
-    if(b){b.textContent=n;b.hidden=n===0;}
+    const v=read(),t=new Date(),ti=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0'),n=Object.values(v).filter(r=>r&&r.d>=ti).length,b=document.querySelectorAll('#season-badge,[data-badge]');
+    b.forEach(x=>{x.textContent=n;x.hidden=n===0;});
     document.querySelectorAll('.star').forEach(s=>{const on=s.dataset.id in v;s.classList.toggle('on',on);s.setAttribute('aria-pressed',on);s.querySelector('span').textContent='Vou correr';});
   }
   document.addEventListener('click',e=>{const s=e.target.closest('.star');if(s){e.preventDefault();S.toggle(s.dataset.id);}});
