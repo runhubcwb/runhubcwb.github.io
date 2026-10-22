@@ -16,6 +16,15 @@
       $$('#calendario .fchips .fchip:not(.fnew)').forEach(x=>x.classList.remove('on'));b.classList.add('on');dist=b.dataset.d;apply();}));
     nw.addEventListener('click',()=>{onlyNew=!onlyNew;nw.classList.toggle('on',onlyNew);apply();});
   }
+  // provas que já passaram (data/calendario/AAAA-MM.json, sob demanda)
+  const pb=$('#past-btn'),pl=$('#past-list'),pw=$('#rh-past');
+  if(pb&&pw){const MS=(pw.dataset.months||'').split(' ').filter(Boolean),CUR=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+    let i=0;const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    pb.addEventListener('click',()=>{if(i>=MS.length)return;const k=MS[i];pb.disabled=true;pb.textContent='Carregando…';
+      fetch('data/calendario/'+k+'.json').then(r=>{if(!r.ok)throw r.status;return r.json();}).then(d=>{i++;
+        pl.insertAdjacentHTML('beforeend',`<section class="past-m"><h4>${esc(d.nome)} · já realizadas</h4><ul class="past-ul">${d.provas.map(p=>`<li><b>${p.d.slice(8)} ${CUR[+p.d.slice(5,7)-1]}</b><span>${esc(p.n)}<small>${esc(p.c)}${p.dist.length?' · '+esc(p.dist.join(' · ')):''}</small></span></li>`).join('')}</ul></section>`);})
+      .catch(()=>{pl.insertAdjacentHTML('beforeend','<p class="empty">Não foi possível carregar. Tente de novo.</p>');})
+      .finally(()=>{pb.disabled=false;pb.textContent='Ver meses anteriores ↓';if(i>=MS.length)pb.remove();});});}
   // pódio (abas)
   $$('.ptab').forEach(t=>t.addEventListener('click',()=>{
     $$('.ptab').forEach(x=>x.classList.toggle('on',x===t));
@@ -36,6 +45,20 @@
       res.textContent=(v||dist)?(n+(n===1?' resultado':' resultados')):'';empty.hidden=n>0;
     }
     rr.addEventListener('change',apply);
+    // meses anteriores: JSON estático carregado sob demanda (data/resultados/AAAA-MM.json)
+    const ms=$('#r-month'),box=$('#r-wks'),cache={};
+    if(ms&&box){
+      cache[ms.dataset.cur]={html:box.innerHTML,opts:Array.from(rr.options).slice(1).map(o=>[o.value,o.textContent])};
+      const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+      function show(d){box.innerHTML=d.html;rr.innerHTML='<option value="">Todas as provas</option>'+d.opts.map(([k,n])=>`<option value="${k}">${esc(n)}</option>`).join('');rr.value='';apply();}
+      ms.addEventListener('change',()=>{const k=ms.value;
+        if(cache[k])return show(cache[k]);
+        box.setAttribute('aria-busy','true');box.innerHTML='<p class="empty">Carregando resultados…</p>';
+        fetch('data/resultados/'+k+'.json').then(r=>{if(!r.ok)throw r.status;return r.json();}).then(d=>{
+          if(window.RHCard&&RHCard.addPodium)RHCard.addPodium(d.podium);cache[k]=d;if(ms.value===k)show(d);})
+        .catch(()=>{box.innerHTML='<p class="empty">Não foi possível carregar este mês. Tente de novo.</p>';})
+        .finally(()=>box.removeAttribute('aria-busy'));});
+    }
     $$('.fchips .fchip').forEach(b=>b.addEventListener('click',()=>{$$('.fchips .fchip').forEach(x=>x.classList.remove('on'));b.classList.add('on');dist=b.dataset.d;apply();}));
   }
 })();

@@ -101,10 +101,10 @@
   const MED=i=>[C.gold,C.silver,C.bronze][i];
   function drawTop10(d,logo){ // d={mes,ano,dist,g,rows,provas}
     const c=canvas(),x=c.getContext('2d');base(x,logo,180);x.textAlign='center';
-    eyebrow(x,`Mais rápid${d.g==='F'?'as':'os'} de ${d.mes} ${d.ano}`,330);
+    eyebrow(x,d.rec?`Recordes de ${d.ano}`:`Mais rápid${d.g==='F'?'as':'os'} de ${d.mes} ${d.ano}`,330);
     x.fillStyle=C.iv;x.font=`400 150px ${BB}`;const t1=d.dist+' ',t2=d.g==='F'?'FEMININO':'MASCULINO';
     const w1=x.measureText(t1).width,w2=x.measureText(t2).width,sx=W/2-(w1+w2)/2;x.textAlign='left';x.fillStyle=C.co;x.fillText(t1,sx,478);x.fillStyle=C.iv;x.fillText(t2,sx+w1,478);
-    x.textAlign='center';x.fillStyle=C.mut;x.font=`600 28px ${MS}`;x.fillText(`Top 10 do mês · ${d.provas} ${d.provas===1?'prova':'provas'} em Curitiba, RMC e litoral`,W/2,536);
+    x.textAlign='center';x.fillStyle=C.mut;x.font=`600 28px ${MS}`;x.fillText(`${d.rec?'Top 10 do ano':'Top 10 do mês'} · ${d.provas} ${d.provas===1?'prova':'provas'} em Curitiba, RMC e litoral`,W/2,536);
     const n=d.rows.length,gap=12,rowH=Math.min(96,Math.floor((1630-580)/Math.max(n,1))-gap);let y=580;
     d.rows.forEach((r,i)=>{
       const med=r.pos<=3?MED(r.pos-1):null;
@@ -117,14 +117,14 @@
       y+=rowH+gap;
     });
     x.textAlign='center';x.fillStyle=C.mut;x.font=`600 22px ${MS}`;
-    x.fillText(fit(x,'Fonte: resultados oficiais · tempo bruto · melhor tempo de cada atleta no mês',W-2*M,22,17,s=>`600 ${s}px ${MS}`),W/2,Math.max(y+16,1650));
+    x.fillText(fit(x,d.rec?`Resultados oficiais desde ${d.desde} · tempo bruto · melhor tempo de cada atleta`:'Fonte: resultados oficiais · tempo bruto · melhor tempo de cada atleta no mês',W-2*M,22,17,s=>`600 ${s}px ${MS}`),W/2,Math.max(y+16,1650));
     footer(x);return c;
   }
   function drawRank(d,logo){ // d={pos,g,mes,ano,dist,nome,eq,t,prova,data,cidade,total}
     const c=canvas(),x=c.getContext('2d');base(x,logo,220);x.textAlign='center';const med=d.pos<=3?MED(d.pos-1):C.iv;
-    eyebrow(x,`Mais rápidos do mês · ${d.mes} ${d.ano}`,380);
+    eyebrow(x,d.rec?`Recordes do ano · ${d.ano}`:`Mais rápidos do mês · ${d.mes} ${d.ano}`,380);
     x.fillStyle=med;x.font=`400 400px ${BB}`;x.fillText(d.pos+'º',W/2,760);
-    x.fillStyle=C.iv;x.font=`800 54px ${MS}`;x.fillText(`mais rápid${d.g==='F'?'a':'o'} de ${d.mes.toLowerCase()}`,W/2,850);
+    x.fillStyle=C.iv;x.font=`800 54px ${MS}`;x.fillText(`mais rápid${d.g==='F'?'a':'o'} de ${d.rec?d.ano:d.mes.toLowerCase()}`,W/2,850);
     x.fillStyle=C.co;x.font=`400 96px ${BB}`;sp(x,`${d.dist} · ${d.g==='F'?'FEMININO':'MASCULINO'}`,W/2,960,3,'center');
     rr(x,M,1020,W-2*M,470,34);x.fillStyle='#232326';x.fill();x.lineWidth=4;x.strokeStyle=d.pos<=3?med:C.co;x.stroke();
     x.fillStyle=C.iv;x.font=`800 54px ${MS}`;const L=wrap(x,d.nome.toUpperCase(),W-2*M-80,2);L.forEach((l,i)=>x.fillText(l,W/2,1100+i*62));
@@ -132,7 +132,7 @@
     if(d.eq){y+=50;x.fillStyle=C.mut;x.fillText(fit(x,d.eq.toUpperCase(),W-2*M-80,28,20,s=>`700 ${s}px ${MS}`),W/2,y);}
     x.fillStyle=C.iv;x.font=`400 ${d.t.length>5?190:210}px ${BB}`;x.fillText(d.t,W/2,y+215);
     x.fillStyle=C.mut;x.fillText(fit(x,`${d.prova} · ${d.data} · ${d.cidade}`,W-2*M-80,28,19,s=>`600 ${s}px ${MS}`),W/2,1452);
-    x.fillStyle=C.mut;x.font=`600 22px ${MS}`;x.fillText('Top 10 do mês em Curitiba, RMC e litoral · tempo bruto, resultados oficiais',W/2,1560);
+    x.fillStyle=C.mut;x.font=`600 22px ${MS}`;x.fillText(d.rec?fit(x,`Top 10 de ${d.ano} · resultados oficiais desde ${d.desde} · tempo bruto`,W-2*M,22,16,s=>`600 ${s}px ${MS}`):'Top 10 do mês em Curitiba, RMC e litoral · tempo bruto, resultados oficiais',W/2,1560);
     footer(x);return c;
   }
 
@@ -182,8 +182,8 @@
     openCalc(d){return API.render('calc',d).then(c=>open(c,`runhubcwb-${d.dist.toLowerCase()}-${d.time.replace(/:/g,'')}.png`,`Meu ${d.dist}: ${d.time}`,`Meu ${d.dist}: ${d.time} (${d.pace}/km). ${d.line||''} · runhubcwb.github.io`));},
     openSeason(list){return API.render('season',list).then(c=>open(c,'runhubcwb-minha-temporada.png','Minha temporada','Minha temporada de corridas · runhubcwb.github.io'));},
     openTop5(id){const p=PODIUM[id];if(!p)return;return API.render('top5',p).then(c=>open(c,`runhubcwb-top5-${id}.png`,`Top 5 · ${p.nome}`,`Top 5 da ${p.nome} ${p.dist} · runhubcwb.github.io`));},
-    openTop10(d){return API.render('top10',d).then(c=>open(c,`runhubcwb-mais-rapidos-${d.mid}-${d.dist.toLowerCase()}-${d.g.toLowerCase()}.png`,`Mais rápidos de ${d.mes} · ${d.dist}`,`Top 10 ${d.dist} ${d.g==='F'?'feminino':'masculino'} de ${d.mes} em Curitiba, RMC e litoral · runhubcwb.github.io`));},
-    openRank(d){return API.render('rank',d).then(c=>open(c,`runhubcwb-${d.pos}o-${d.dist.toLowerCase()}-${d.mid}.png`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.mes} · ${d.dist}`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.mes} no ${d.dist}: ${d.t} · runhubcwb.github.io`));},
+    openTop10(d){if(d.rec)return API.render('top10',d).then(c=>open(c,`runhubcwb-recordes-${d.ano}-${d.dist.toLowerCase()}-${d.g.toLowerCase()}.png`,`Recordes de ${d.ano} · ${d.dist}`,`Top 10 ${d.dist} ${d.g==='F'?'feminino':'masculino'} de ${d.ano} em Curitiba, RMC e litoral · runhubcwb.github.io`));return API.render('top10',d).then(c=>open(c,`runhubcwb-mais-rapidos-${d.mid}-${d.dist.toLowerCase()}-${d.g.toLowerCase()}.png`,`Mais rápidos de ${d.mes} · ${d.dist}`,`Top 10 ${d.dist} ${d.g==='F'?'feminino':'masculino'} de ${d.mes} em Curitiba, RMC e litoral · runhubcwb.github.io`));},
+    openRank(d){if(d.rec)return API.render('rank',d).then(c=>open(c,`runhubcwb-recorde-${d.pos}o-${d.dist.toLowerCase()}-${d.ano}.png`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.ano} · ${d.dist}`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.ano} no ${d.dist}: ${d.t} · runhubcwb.github.io`));return API.render('rank',d).then(c=>open(c,`runhubcwb-${d.pos}o-${d.dist.toLowerCase()}-${d.mid}.png`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.mes} · ${d.dist}`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.mes} no ${d.dist}: ${d.t} · runhubcwb.github.io`));},
     openMundo(d){return API.render('mundo',d).then(c=>open(c,d.mode==='caminho'?`runhubcwb-provas-ate-${d.alvo.toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g,'-')}.png`:'runhubcwb-meu-indice.png',d.mode==='caminho'?`Minhas provas até ${d.alvo}`:`Meu índice: ${d.t}`,d.mode==='caminho'?`Minhas provas até ${d.alvo} · runhubcwb.github.io/mundo.html`:`Meu índice para as majors: ${d.t} · runhubcwb.github.io/mundo.html`));},
     calcReady(d){const b=document.getElementById('share-box');if(!b)return;
       if(!d){b.hidden=true;b.innerHTML='';return;}
@@ -191,6 +191,7 @@
       b.querySelector('#sb-go').onclick=()=>API.openCalc(d);}
   };
   let PODIUM={};const pe=document.getElementById('rh-podium');if(pe)try{PODIUM=JSON.parse(pe.textContent);}catch(e){}
+  API.addPodium=o=>{Object.assign(PODIUM,o||{});};
   document.addEventListener('click',e=>{const b=e.target.closest('.share-top5');if(b)API.openTop5(b.dataset.p);});
   window.RHCard=API;
   if(window.RHLastCalc)API.calcReady(window.RHLastCalc);

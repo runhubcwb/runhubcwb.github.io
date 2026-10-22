@@ -595,3 +595,8 @@ body[data-tab=resultados] html,body[data-tab=resultados]{scroll-padding-top:136p
   .hub{grid-template-columns:repeat(3,1fr)}
   .sec{padding:72px 0}
 }
+.rec-note{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--co);border-radius:var(--r);padding:12px 14px;font-size:14px;line-height:1.5;margin-bottom:18px;color:var(--iv)}
+.past{margin-top:22px}.past-m{margin-top:14px}.past-m h4{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.past-ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}.past-ul li{display:flex;gap:12px;align-items:baseline;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;opacity:.85}
+.past-ul b{font-family:"Bebas Neue",Impact,sans-serif;font-size:20px;color:var(--co);min-width:56px}.past-ul span{min-width:0;overflow-wrap:anywhere}.past-ul small{display:block;color:var(--mut);font-size:12px}
+#r-wks[aria-busy=true]{opacity:.6}
