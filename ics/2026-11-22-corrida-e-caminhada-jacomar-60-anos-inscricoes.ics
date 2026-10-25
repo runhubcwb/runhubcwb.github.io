@@ -6,7 +6,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-22-corrida-e-caminhada-jacomar-60-anos-inscricoes@runhubcwb.git
  hub.io
-DTSTAMP:20261022T120000Z
+DTSTAMP:20261025T120000Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:Último dia de inscrições · Corrida e Caminhada Jacomar 60 Anos
