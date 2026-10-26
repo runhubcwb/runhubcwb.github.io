@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-01-10-milhas-da-ponkan@runhubcwb.github.io
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:10 Milhas da Ponkan
+DESCRIPTION:10 Milhas da Ponkan\nCerro Azul · 16K · 4\,3K\nHorário de la
+ rgada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ticketsport
+ s.com.br/e/10-milhas-da-ponkan-87698\n\nConfirme data\, horário e local n
+ o site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Praça Central de Cerro Azul\, Cerro Azul - PR
+URL:https://www.ticketsports.com.br/e/10-milhas-da-ponkan-87698
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:10 Milhas da Ponkan
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
