@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-31-corrida-da-virada-guaratuba@runhubcwb.github.io
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:Corrida da Virada · Guaratuba
+DESCRIPTION:Corrida da Virada · Guaratuba\nGuaratuba · 5K\nHorário de la
+ rgada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ticketsport
+ s.com.br/e/e-88661\n\nConfirme data\, horário e local no site oficial do 
+ organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Praia Central (Av. Atlântica)\, Guaratuba - PR
+URL:https://www.ticketsports.com.br/e/e-88661
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida da Virada · Guaratuba
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

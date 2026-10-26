@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-01-5a-corrida-do-bope@runhubcwb.github.io
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:5ª Corrida do BOPE
+DESCRIPTION:5ª Corrida do BOPE\nSão José dos Pinhais · 10K · 5K\nHorá
+ rio de largada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ti
+ cketsports.com.br/e/e-87599\n\nConfirme data\, horário e local no site of
+ icial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Sede do BOPE (R. Ilo Antoninho Mozer\, 81\, Cristal)\, São José 
+ dos Pinhais - PR
+URL:https://www.ticketsports.com.br/e/e-87599
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:5ª Corrida do BOPE
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

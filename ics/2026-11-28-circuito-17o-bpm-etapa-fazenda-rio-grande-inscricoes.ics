@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-circuito-17o-bpm-etapa-fazenda-rio-grande-inscricoes@runhubc
+ wb.github.io
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Último dia de inscrições · Circuito 17º BPM · Etapa Fazenda R
+ io Grande
+DESCRIPTION:Último dia para se inscrever em Circuito 17º BPM · Etapa Faz
+ enda Rio Grande (28/11\, Fazenda Rio Grande).\n\nInscrições: Assessocor\
+ nhttps://app.assessocor.online/evento/circuito-17o-bpm-de-corridas-de-rua/
+ 938\n\nConfirme o prazo no site oficial do organizador.\nRun Hub CWB · ru
+ nhubcwb.github.io
+URL:https://app.assessocor.online/evento/circuito-17o-bpm-de-corridas-de-ru
+ a/938
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Circuito 17º BPM · Etapa Fazen
+ da Rio Grande
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

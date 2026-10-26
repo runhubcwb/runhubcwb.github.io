@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-14-7a-corrida-noturna-da-guarda-municipal-de-pinhais-inscricoes
+ @runhubcwb.github.io
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+SUMMARY:Último dia de inscrições · 7ª Corrida Noturna da Guarda Munici
+ pal de Pinhais
+DESCRIPTION:Último dia para se inscrever em 7ª Corrida Noturna da Guarda 
+ Municipal de Pinhais (14/11\, Pinhais).\n\nInscrições: Assessocor\nhttps
+ ://app.assessocor.online/evento/corrida-da-guarda-municipal-de-pinhais/916
+ \n\nConfirme o prazo no site oficial do organizador.\nRun Hub CWB · runhu
+ bcwb.github.io
+URL:https://app.assessocor.online/evento/corrida-da-guarda-municipal-de-pin
+ hais/916
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 7ª Corrida Noturna da Guarda Mu
+ nicipal de Pinhais
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

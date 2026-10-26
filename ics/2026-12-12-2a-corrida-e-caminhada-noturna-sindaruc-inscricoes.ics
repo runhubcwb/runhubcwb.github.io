@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-2a-corrida-e-caminhada-noturna-sindaruc-inscricoes@runhubcwb
+ .github.io
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Último dia de inscrições · 2ª Corrida e Caminhada Noturna SIND
+ ARUC
+DESCRIPTION:Último dia para se inscrever em 2ª Corrida e Caminhada Noturn
+ a SINDARUC (12/12\, Curitiba).\n\nInscrições: Assessocor\nhttps://app.as
+ sessocor.online/evento/corrida-e-caminhada-sindaruc/937\n\nConfirme o praz
+ o no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://app.assessocor.online/evento/corrida-e-caminhada-sindaruc/937
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 2ª Corrida e Caminhada Noturna 
+ SINDARUC
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

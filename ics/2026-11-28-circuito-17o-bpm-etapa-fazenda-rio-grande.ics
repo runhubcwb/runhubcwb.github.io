@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-28-circuito-17o-bpm-etapa-fazenda-rio-grande@runhubcwb.github.i
+ o
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Circuito 17º BPM · Etapa Fazenda Rio Grande
+DESCRIPTION:Circuito 17º BPM · Etapa Fazenda Rio Grande\nFazenda Rio Gran
+ de · 5K\nHorário de largada a confirmar.\n\nInscrições: Assessocor\nht
+ tps://app.assessocor.online/evento/circuito-17o-bpm-de-corridas-de-rua/938
+ \n\nConfirme data\, horário e local no site oficial do organizador.\nRun 
+ Hub CWB · runhubcwb.github.io
+LOCATION:Praça Brasil (R. Macedônia\, Nações)\, Fazenda Rio Grande - PR
+URL:https://app.assessocor.online/evento/circuito-17o-bpm-de-corridas-de-ru
+ a/938
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Circuito 17º BPM · Etapa Fazenda Rio Grande
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

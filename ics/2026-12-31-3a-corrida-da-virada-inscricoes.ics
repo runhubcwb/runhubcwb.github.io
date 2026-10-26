@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-31-3a-corrida-da-virada-inscricoes@runhubcwb.github.io
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Último dia de inscrições · 3ª Corrida da Virada
+DESCRIPTION:Último dia para se inscrever em 3ª Corrida da Virada (31/12\,
+  Matinhos).\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.b
+ r/e/e-88597\n\nConfirme o prazo no site oficial do organizador.\nRun Hub C
+ WB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88597
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 3ª Corrida da Virada
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

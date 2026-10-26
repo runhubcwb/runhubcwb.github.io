@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-08-corrida-multirun-grupo-multilit@runhubcwb.github.io
+DTSTAMP:20261026T120000Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+SUMMARY:Corrida MultiRun (Grupo Multilit)
+DESCRIPTION:Corrida MultiRun (Grupo Multilit)\nSão José dos Pinhais · 10
+ K\nHorário de largada a confirmar.\n\nInscrições: Assessocor\nhttps://a
+ pp.assessocor.online/evento/corrida-multirun/902\n\nConfirme data\, horár
+ io e local no site oficial do organizador.\nRun Hub CWB · runhubcwb.githu
+ b.io
+LOCATION:Centro de Condicionamento Físico (R. Pedro Karwowski\, 760\, Ipê
+ )\, São José dos Pinhais - PR
+URL:https://app.assessocor.online/evento/corrida-multirun/902
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida MultiRun (Grupo Multilit)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
