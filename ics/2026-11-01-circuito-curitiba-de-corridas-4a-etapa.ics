@@ -5,16 +5,17 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-01-circuito-curitiba-de-corridas-4a-etapa@runhubcwb.github.io
-DTSTAMP:20261026T120000Z
+DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:Circuito Curitiba de Corridas · 4ª Etapa
-DESCRIPTION:Circuito Curitiba de Corridas · 4ª Etapa\nCuritiba · distân
- cias a confirmar\nHorário de largada a confirmar.\n\nInscrições: Prefei
- tura de Curitiba\nhttps://esporte.curitiba.pr.gov.br/conteudo/corrida-de-r
- ua/769\n\nConfirme data\, horário e local no site oficial do organizador.
- \nRun Hub CWB · runhubcwb.github.io
-LOCATION:Curitiba - PR
+DESCRIPTION:Circuito Curitiba de Corridas · 4ª Etapa\nCuritiba · 10K · 
+ 5K\nHorário de largada a confirmar.\n\nInscrições: Prefeitura de Curiti
+ ba\nhttps://esporte.curitiba.pr.gov.br/conteudo/corrida-de-rua/769\n\nConf
+ irme data\, horário e local no site oficial do organizador.\nRun Hub CWB 
+ · runhubcwb.github.io
+LOCATION:Av. Manoel Ribas\, 6.121 (em frente ao Dom Antônio\, Santa Felici
+ dade)\, Curitiba - PR
 URL:https://esporte.curitiba.pr.gov.br/conteudo/corrida-de-rua/769
 TRANSP:TRANSPARENT
 BEGIN:VALARM

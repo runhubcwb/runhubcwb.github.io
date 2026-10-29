@@ -3,17 +3,25 @@ VERSION:2.0
 PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:2026-11-01-corrida-km1-etapa-sao-jose-dos-pinhais@runhubcwb.github.io
-DTSTAMP:20261026T120000Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
+DTSTAMP:20261029T120000Z
+DTSTART;TZID=America/Sao_Paulo:20261101T070000
+DTEND;TZID=America/Sao_Paulo:20261101T090000
 SUMMARY:Corrida Km1 · Etapa São José dos Pinhais
 DESCRIPTION:Corrida Km1 · Etapa São José dos Pinhais\nSão José dos Pin
- hais · 5K · 3K\nHorário de largada a confirmar.\n\nInscrições: Ticket
-  Sports\nhttps://www.ticketsports.com.br/e/e-86470\n\nConfirme data\, hor
- ário e local no site oficial do organizador.\nRun Hub CWB · runhubcwb.gi
- thub.io
+ hais · 5K · 3K\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.
+ com.br/e/e-86470\n\nConfirme data\, horário e local no site oficial do or
+ ganizador.\nRun Hub CWB · runhubcwb.github.io
 LOCATION:Praça do Verbo Divino (R. Veríssimo Marques\, 55\, Centro)\, Sã
  o José dos Pinhais - PR
 URL:https://www.ticketsports.com.br/e/e-86470
@@ -21,7 +29,7 @@ TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Corrida Km1 · Etapa São José dos Pinhais
-TRIGGER:-PT15H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR

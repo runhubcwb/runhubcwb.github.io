@@ -6,7 +6,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-12-2a-corrida-e-caminhada-noturna-sindaruc-inscricoes@runhubcwb
  .github.io
-DTSTAMP:20261026T120000Z
+DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Último dia de inscrições · 2ª Corrida e Caminhada Noturna SIND

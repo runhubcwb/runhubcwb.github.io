@@ -3,23 +3,32 @@ VERSION:2.0
 PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:2026-11-01-corrida-e-caminhada-com-a-mae-do-rocio@runhubcwb.github.io
-DTSTAMP:20261026T120000Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
+DTSTAMP:20261029T120000Z
+DTSTART;TZID=America/Sao_Paulo:20261101T063000
+DTEND;TZID=America/Sao_Paulo:20261101T083000
 SUMMARY:Corrida e Caminhada com a Mãe do Rocio
-DESCRIPTION:Corrida e Caminhada com a Mãe do Rocio\nParanaguá · 5K\nHor
- ário de largada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.
- ticketsports.com.br/e/e-86643\n\nConfirme data\, horário e local no site 
- oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+DESCRIPTION:Corrida e Caminhada com a Mãe do Rocio\nParanaguá · 5K\n\nIn
+ scrições: Ticket Sports\nhttps://www.ticketsports.com.br/e/e-86643\n\nCo
+ nfirme data\, horário e local no site oficial do organizador.\nRun Hub CW
+ B · runhubcwb.github.io
 LOCATION:Paranaguá - PR
 URL:https://www.ticketsports.com.br/e/e-86643
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Corrida e Caminhada com a Mãe do Rocio
-TRIGGER:-PT15H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR
