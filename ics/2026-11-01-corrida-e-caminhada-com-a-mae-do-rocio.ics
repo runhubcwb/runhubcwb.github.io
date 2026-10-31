@@ -14,7 +14,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2026-11-01-corrida-e-caminhada-com-a-mae-do-rocio@runhubcwb.github.io
-DTSTAMP:20261030T120000Z
+DTSTAMP:20261031T120000Z
 DTSTART;TZID=America/Sao_Paulo:20261101T063000
 DTEND;TZID=America/Sao_Paulo:20261101T083000
 SUMMARY:Corrida e Caminhada com a Mãe do Rocio

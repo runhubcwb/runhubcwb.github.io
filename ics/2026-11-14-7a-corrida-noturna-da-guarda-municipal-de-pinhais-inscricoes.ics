@@ -6,7 +6,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-11-14-7a-corrida-noturna-da-guarda-municipal-de-pinhais-inscricoes
  @runhubcwb.github.io
-DTSTAMP:20261030T120000Z
+DTSTAMP:20261031T120000Z
 DTSTART;VALUE=DATE:20261108
 DTEND;VALUE=DATE:20261109
 SUMMARY:Último dia de inscrições · 7ª Corrida Noturna da Guarda Munici
