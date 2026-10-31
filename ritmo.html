@@ -24,16 +24,17 @@
 <form class="panel" autocomplete="off" onsubmit="return false"><p class="eyebrow">1 · Distância</p>
 <div class="pk-pre"><button type="button" data-d="5">5K</button><button type="button" data-d="10">10K</button><button type="button" data-d="21.0975">21,1K</button><button type="button" data-d="42.195">42,2K</button><button type="button" data-d="x">Outra</button></div>
 <label class="fld" id="pk-xw" hidden><span>Distância (km)</span><input id="pk-x" inputmode="decimal" placeholder="ex.: 7,5"></label>
-<p class="eyebrow" style="margin-top:14px">2 · Pace base</p><div class="pk-base"><label class="fld"><span>Pace (min/km)</span><input id="pk-base" inputmode="numeric" placeholder="m:ss"></label><button type="button" class="btn" id="pk-apply">Aplicar a todos</button></div>
+<p class="eyebrow" style="margin-top:14px">2 · Pace base</p><div class="pk-base"><label class="fld"><span>Pace (min/km)</span><input id="pk-base" inputmode="numeric" maxlength="5" placeholder="m:ss"></label><button type="button" class="btn" id="pk-apply">Aplicar a todos</button></div>
 <p class="pk-warn" id="pk-warn" aria-live="polite"></p>
 <p class="eyebrow" style="margin-top:10px">3 · Ajuste cada km</p><div class="pk-hd"><span>Trecho</span><span>Pace</span><span>Passagem</span></div><div class="pk-rows" id="pk-rows"></div>
 <div class="pk-act"><button type="button" class="btn btn-ghost btn-sm" id="pk-reset">Limpar</button></div></form>
 <div class="panel pk-res" id="pk-res" aria-live="polite" hidden><p class="eyebrow">Resultado</p><div class="pk-big"><div><small>Tempo total</small><b id="pk-tot">–</b></div><div><small>Pace médio</small><b id="pk-avg">–</b></div></div>
 <p style="margin:8px 0 0;opacity:.7;font-size:.85rem">Velocidade média: <span id="pk-spd"></span></p><dl class="pk-more" id="pk-more"></dl>
-<p class="note" style="margin-top:12px">O trecho final é calculado proporcionalmente à fração do km. Seus valores ficam salvos só neste aparelho.</p></div>
+<button type="button" class="btn" id="pk-share" style="margin-top:14px;width:100%">Compartilhar card ↗</button><p class="note" style="margin-top:12px">O trecho final é calculado proporcionalmente à fração do km. Seus valores ficam salvos só neste aparelho.</p></div>
 </div></div></section></main><script>(function(){
 var K="rh-ritmo-v1",$=function(i){return document.getElementById(i)};
-function pp(s){s=String(s||"").trim().replace(",",".");var m=s.match(/^(\d{1,2})[:'.h ]?(\d{2})$/)||s.match(/^(\d{1,2})$/);if(!m)return null;var a=+m[1],b=m[2]==null?0:+m[2];if(b>59)return null;var v=a*60+b;return v>=120&&v<=1800?v:null}
+function mk(v){var d=String(v||"").replace(/\D/g,"").slice(0,4);return d.length<3?d:d.slice(0,-2)+":"+d.slice(-2)}
+function pp(s){s=mk(s);var m=s.match(/^(\d{1,2}):(\d{2})$/)||s.match(/^(\d{1,2})$/);if(!m)return null;var a=+m[1],b=m[2]==null?0:+m[2];if(b>59)return null;var v=a*60+b;return v>=120&&v<=1800?v:null}
 function ft(t,f){t=Math.floor(t+1e-6);var h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60,p=function(n){return(n<10?"0":"")+n};return h||f?h+":"+p(m)+":"+p(s):m+":"+p(s)}
 function fk(d){return(+d.toFixed(4)).toString().replace(".",",")}
 function segs(D){var r=[],n=Math.floor(D+1e-9);for(var i=1;i<=n;i++)r.push(1);var f=+(D-n).toFixed(4);if(f>0.0005)r.push(f);return r}
@@ -43,13 +44,13 @@ function calc(D,P){var S=segs(D),cum=0,km=0,rows=[],marks=[[5,"5K"],[10,"10K"],[
  var full=rows.filter(function(r){return r.d===1}),q=full.length?full:rows,fa=q[0],sl=q[0];q.forEach(function(r){if(r.p<fa.p)fa=r;if(r.p>sl.p)sl=r});
  var h=Math.floor(S.length/2),a=0,b=0,da=0,db=0;rows.forEach(function(r,i){if(i<h){a+=r.t;da+=r.d}else{b+=r.t;db+=r.d}});
  return{rows:rows,total:cum,avg:cum/D,pas:pas,fast:fa,slow:sl,h1:da?a/da:0,h2:db?b/db:0}}
-if(typeof module!="undefined"){module.exports={calc:calc,pp:pp,ft:ft,segs:segs};return}
+if(typeof module!="undefined"){module.exports={mk:mk,calc:calc,pp:pp,ft:ft,segs:segs};return}
 var st={d:"10",x:"",base:"5:30",p:[]};try{var o=JSON.parse(localStorage.getItem(K));if(o)st=o}catch(e){}
 function dist(){var v=st.d==="x"?parseFloat(String(st.x).replace(",",".")):+st.d;return v>0&&v<=100?Math.round(v*1e4)/1e4:null}
 function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
 function build(){var D=dist(),L=$("pk-rows");$("pk-xw").hidden=st.d!=="x";document.querySelectorAll(".pk-pre button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.d===st.d)});
  if(!D){L.innerHTML='<p class="pk-msg">Informe uma distância entre 0,1 e 100 km.</p>';out();return}
- var S=segs(D),h="";S.forEach(function(d,i){var v=st.p[i]||st.base||"";h+='<div class="pk-row"><span class="pk-km">'+(d===1?"Km "+(i+1):"Final · "+fk(d)+" km")+'</span><input data-i="'+i+'" inputmode="numeric" placeholder="m:ss" aria-label="Pace do trecho '+(i+1)+'" value="'+v+'"><span class="pk-c" id="pk-c'+i+'">–</span></div>'});
+ var S=segs(D),h="";S.forEach(function(d,i){var v=mk(st.p[i]||st.base||"");h+='<div class="pk-row"><span class="pk-km">'+(d===1?"Km "+(i+1):"Final · "+fk(d)+" km")+'</span><input data-i="'+i+'" inputmode="numeric" maxlength="5" placeholder="m:ss" aria-label="Pace do trecho '+(i+1)+'" value="'+v+'"><span class="pk-c" id="pk-c'+i+'">–</span></div>'});
  L.innerHTML=h;out()}
 function out(){var D=dist(),R=$("pk-res");if(!D){R.hidden=true;return}var S=segs(D),P=[],bad=0;
  document.querySelectorAll("#pk-rows input").forEach(function(e,i){var v=pp(e.value);e.classList.toggle("bad",e.value!==""&&v==null);if(v==null)bad++;P[i]=v});
@@ -58,13 +59,16 @@ function out(){var D=dist(),R=$("pk-res");if(!D){R.hidden=true;return}var S=segs
  $("pk-tot").textContent=ft(c.total,1);$("pk-avg").textContent=ft(c.avg)+"/km";$("pk-spd").textContent=(3600/c.avg).toFixed(1).replace(".",",")+" km/h";
  var x='<div><dt>1ª metade</dt><dd>'+ft(c.h1)+'/km</dd></div><div><dt>2ª metade</dt><dd>'+ft(c.h2)+'/km</dd></div>';
  if(c.rows.length>1&&c.fast.p!==c.slow.p)x+='<div><dt>Km mais rápido</dt><dd>'+lbl(c,c.fast)+' · '+ft(c.fast.p)+'</dd></div><div><dt>Km mais lento</dt><dd>'+lbl(c,c.slow)+' · '+ft(c.slow.p)+'</dd></div>';
+ LAST={dist:lab(D),total:ft(c.total,1).replace(/^0:/,""),avg:ft(c.avg),rows:c.rows.map(function(r){return{d:r.d,p:r.p,l:ft(r.p)}}),pas:c.pas.map(function(p){return[p[0],ft(p[1],1)]}),fast:c.rows.length>1&&c.fast.p!==c.slow.p?c.rows.indexOf(c.fast):null,slow:c.rows.indexOf(c.slow)};
  c.pas.forEach(function(p){x+='<div><dt>Passagem '+p[0]+'</dt><dd>'+ft(p[1],1)+'</dd></div>'});$("pk-more").innerHTML=x}
+var LAST=null;function lab(D){return{5:"5K",10:"10K",21.0975:"Meia maratona",42.195:"Maratona"}[D]||fk(D)+" km"}
+$("pk-share").addEventListener("click",function(){if(LAST&&window.RHCard)RHCard.openRitmo(LAST)});
 function lbl(c,r){return"km "+(c.rows.indexOf(r)+1)}
 document.querySelector(".pk-pre").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;st.d=b.dataset.d;st.p=[];save();build();if(st.d==="x")$("pk-x").focus()});
 $("pk-x").value=st.x;$("pk-x").addEventListener("input",function(){st.x=this.value;st.p=[];save();build()});
-$("pk-base").value=st.base;$("pk-base").addEventListener("input",function(){st.base=this.value;save()});
+$("pk-base").value=mk(st.base);$("pk-base").addEventListener("input",function(){this.value=mk(this.value);st.base=this.value;this.classList.toggle("bad",this.value.length>2&&pp(this.value)==null);save()});
 $("pk-apply").addEventListener("click",function(){if(pp(st.base)==null){$("pk-warn").textContent="Pace base inválido (use m:ss).";return}st.p=[];save();build()});
-$("pk-rows").addEventListener("input",function(e){var i=+e.target.dataset.i;st.p[i]=e.target.value;save();out()});
+$("pk-rows").addEventListener("input",function(e){var i=+e.target.dataset.i;e.target.value=mk(e.target.value);st.p[i]=e.target.value;save();out()});
 $("pk-reset").addEventListener("click",function(){st={d:"10",x:"",base:"5:30",p:[]};$("pk-x").value="";$("pk-base").value=st.base;save();build()});
 build()})();
 </script></div>
@@ -78,5 +82,5 @@ build()})();
   <p class="f-copy">© 2026 Run Hub CWB · Atualizado em 31/10/2026</p>
 </div></footer>
 <nav class="tabbar" aria-label="Principal"><a class="tb" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/></svg><span>Provas</span></a><a class="tb" href="resultados.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg><span>Resultados</span></a><a class="tb" href="ferramentas.html" aria-current=page><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg><span>Ferramentas</span></a><a class="tb" href="mundo.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Mundo</span></a><a class="tb" href="temporada.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9Z"/></svg><span>Temporada</span><b class="badge" data-badge hidden>0</b></a></nav>
-<script src="js/app.js" defer></script>
+<script src="js/app.js" defer></script><script src="js/card.js" defer></script>
 </body></html>

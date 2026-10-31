@@ -164,6 +164,28 @@
     }
     x.textAlign='center';footer(x);return c;
   }
+  function drawRitmo(d,logo){
+    const c=canvas(),x=c.getContext('2d');const top=base(x,logo,220);x.textAlign='center';
+    eyebrow(x,'Meu ritmo km a km',top+70);
+    x.fillStyle=C.iv;x.font=`400 150px ${BB}`;x.fillText(d.dist,W/2,top+220);
+    x.fillStyle=C.mut;x.font=`700 30px ${MS}`;sp(x,'TEMPO TOTAL',W/2,top+290,6,'center');
+    x.fillStyle=C.iv;x.font=`400 ${d.total.length>5?230:260}px ${BB}`;x.fillText(d.total,W/2,top+500);
+    x.fillStyle=C.mut;x.font=`700 30px ${MS}`;sp(x,'PACE MÉDIO',W/2,top+570,6,'center');
+    x.fillStyle=C.co;x.font=`400 120px ${BB}`;x.fillText(d.avg+' /km',W/2,top+690);
+    // barras: uma por trecho, altura pela velocidade
+    const R=d.rows,n=R.length,cx0=M,cw=W-2*M,by=top+930,bh=220,gap=n>25?4:n>12?8:14,bw=(cw-gap*(n-1))/n;
+    const sp_=R.map(r=>1/r.p),fu=sp_.filter((v,i)=>R[i].d===1),ref=fu.length?fu:sp_,mx=Math.max(...ref),mn=Math.min(...ref);
+    R.forEach((r,i)=>{const k=mx===mn?1:Math.max(0,Math.min(1,(sp_[i]-mn)/(mx-mn))),h=bh*(.35+.65*k),bx=cx0+i*(bw+gap);
+      x.fillStyle=i===d.fast?C.co:i===d.slow?'rgba(242,239,232,.28)':'rgba(242,239,232,.6)';rr(x,bx,by-h,bw*(r.d<1?Math.max(r.d,.3):1),h,Math.min(10,bw/3));x.fill();
+      if(n<=12){x.fillStyle=i===d.fast?C.co:C.iv;x.font=`700 ${n>10?24:28}px ${MS}`;x.fillText(r.l,bx+bw/2,by+44);x.fillStyle=C.mut;x.font=`600 22px ${MS}`;x.fillText(r.d<1?'final':'km '+(i+1),bx+bw/2,by+76);}});
+    if(n>12){x.fillStyle=C.mut;x.font=`600 24px ${MS}`;x.textAlign='left';x.fillText('km 1',cx0,by+40);x.textAlign='right';x.fillText(d.rows[n-1].d<1?'final':'km '+n,cx0+cw,by+40);x.textAlign='center';}
+    // estatísticas
+    const st=[];d.pas.forEach(p=>st.push(['Passagem '+p[0],p[1]]));if(d.fast!=null)st.push(['Km mais rápido','km '+(d.fast+1)+' · '+R[d.fast].l],['Km mais lento','km '+(d.slow+1)+' · '+R[d.slow].l]);
+    let y=by+(n<=12?150:110);const half=Math.ceil(st.length/2),colW=cw/2;
+    st.forEach((t,i)=>{const col=st.length>3?Math.floor(i/half):0,row=st.length>3?i%half:i,xx=st.length>3?cx0+col*colW+colW/2:W/2,yy=y+row*92;
+      x.fillStyle=C.mut;x.font=`700 24px ${MS}`;sp(x,t[0].toUpperCase(),xx,yy,3,'center');x.fillStyle=C.iv;x.font=`800 38px ${MS}`;x.fillText(t[1],xx,yy+44);});
+    footer(x);return c;
+  }
   function open(c,fname,title,text){
     if(!modal){modal=document.createElement('div');modal.className='sc-modal';modal.hidden=true;modal.innerHTML='<div class="sc-box" role="dialog" aria-modal="true" aria-label="Card para os stories"><button class="sc-x" type="button" aria-label="Fechar">✕</button><p class="eyebrow">Card para os stories</p><img alt=""><div class="sc-acts"><button class="btn sc-share" type="button" hidden>Compartilhar ↗</button><a class="btn btn-ghost sc-dl">Baixar imagem ↓</a></div><p class="sc-tip">1080 × 1920 px · pronto pros stories do Instagram</p></div>';
       document.body.appendChild(modal);modal.addEventListener('click',e=>{if(e.target===modal||e.target.closest('.sc-x'))close();});document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});}
@@ -178,13 +200,14 @@
   }
   function close(){if(modal){modal.hidden=true;document.documentElement.classList.remove('sc-lock');}}
   const API={
-    render(kind,data){return prep().then(l=>({calc:drawCalc,season:drawSeason,top5:drawTop5,top10:drawTop10,rank:drawRank,mundo:drawMundo})[kind](data,l));},
+    render(kind,data){return prep().then(l=>({calc:drawCalc,season:drawSeason,top5:drawTop5,top10:drawTop10,rank:drawRank,ritmo:drawRitmo,mundo:drawMundo})[kind](data,l));},
     openCalc(d){return API.render('calc',d).then(c=>open(c,`runhubcwb-${d.dist.toLowerCase()}-${d.time.replace(/:/g,'')}.png`,`Meu ${d.dist}: ${d.time}`,`Meu ${d.dist}: ${d.time} (${d.pace}/km). ${d.line||''} · runhubcwb.github.io`));},
     openSeason(list){return API.render('season',list).then(c=>open(c,'runhubcwb-minha-temporada.png','Minha temporada','Minha temporada de corridas · runhubcwb.github.io'));},
     openTop5(id){const p=PODIUM[id];if(!p)return;return API.render('top5',p).then(c=>open(c,`runhubcwb-top5-${id}.png`,`Top 5 · ${p.nome}`,`Top 5 da ${p.nome} ${p.dist} · runhubcwb.github.io`));},
     openTop10(d){if(d.rec)return API.render('top10',d).then(c=>open(c,`runhubcwb-recordes-${d.ano}-${d.dist.toLowerCase()}-${d.g.toLowerCase()}.png`,`Recordes de ${d.ano} · ${d.dist}`,`Top 10 ${d.dist} ${d.g==='F'?'feminino':'masculino'} de ${d.ano} em Curitiba, RMC e litoral · runhubcwb.github.io`));return API.render('top10',d).then(c=>open(c,`runhubcwb-mais-rapidos-${d.mid}-${d.dist.toLowerCase()}-${d.g.toLowerCase()}.png`,`Mais rápidos de ${d.mes} · ${d.dist}`,`Top 10 ${d.dist} ${d.g==='F'?'feminino':'masculino'} de ${d.mes} em Curitiba, RMC e litoral · runhubcwb.github.io`));},
     openRank(d){if(d.rec)return API.render('rank',d).then(c=>open(c,`runhubcwb-recorde-${d.pos}o-${d.dist.toLowerCase()}-${d.ano}.png`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.ano} · ${d.dist}`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.ano} no ${d.dist}: ${d.t} · runhubcwb.github.io`));return API.render('rank',d).then(c=>open(c,`runhubcwb-${d.pos}o-${d.dist.toLowerCase()}-${d.mid}.png`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.mes} · ${d.dist}`,`${d.pos}º mais rápid${d.g==='F'?'a':'o'} de ${d.mes} no ${d.dist}: ${d.t} · runhubcwb.github.io`));},
     openMundo(d){return API.render('mundo',d).then(c=>open(c,d.mode==='caminho'?`runhubcwb-provas-ate-${d.alvo.toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g,'-')}.png`:'runhubcwb-meu-indice.png',d.mode==='caminho'?`Minhas provas até ${d.alvo}`:`Meu índice: ${d.t}`,d.mode==='caminho'?`Minhas provas até ${d.alvo} · runhubcwb.github.io/mundo.html`:`Meu índice para as majors: ${d.t} · runhubcwb.github.io/mundo.html`));},
+    openRitmo(d){return API.render('ritmo',d).then(c=>open(c,`runhubcwb-ritmo-${d.dist.toLowerCase().replace(/[^a-z0-9]+/g,'')}-${d.total.replace(/:/g,'')}.png`,`Meu ritmo km a km · ${d.dist}`,`Meu ritmo km a km nos ${d.dist}: ${d.total} (${d.avg}/km) · runhubcwb.github.io`));},
     calcReady(d){const b=document.getElementById('share-box');if(!b)return;
       if(!d){b.hidden=true;b.innerHTML='';return;}
       b.hidden=false;b.innerHTML=`<div class="sb-in"><p><b>Mostra pra galera:</b> gere um card com seu tempo, pace e a comparação com o top 5.</p><button class="btn" type="button" id="sb-go">Gerar card pros stories ↗</button></div>`;
