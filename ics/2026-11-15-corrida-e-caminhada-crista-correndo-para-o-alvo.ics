@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-15-corrida-e-caminhada-crista-correndo-para-o-alvo@runhubcwb.gi
+ thub.io
+DTSTAMP:20261102T120000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Corrida e Caminhada Cristã · Correndo para o Alvo
+DESCRIPTION:Corrida e Caminhada Cristã · Correndo para o Alvo\nCuritiba 
+ · distâncias a confirmar\nHorário de largada a confirmar.\n\nInscriçõ
+ es: Sympla\nhttps://www.sympla.com.br/evento/corrida-e-caminhada-crista-co
+ rrendo-para-o-alvo/3625230\n\nConfirme data\, horário e local no site ofi
+ cial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Parque Náutico (Av. Marechal Floriano Peixoto)\, Curitiba - PR
+URL:https://www.sympla.com.br/evento/corrida-e-caminhada-crista-correndo-pa
+ ra-o-alvo/3625230
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida e Caminhada Cristã · Correndo para o Alvo
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

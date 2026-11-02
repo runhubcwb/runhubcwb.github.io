@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-06-marcha-atopica-curitiba@runhubcwb.github.io
+DTSTAMP:20261102T120000Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Marcha Atópica Curitiba
+DESCRIPTION:Marcha Atópica Curitiba\nCuritiba · 10K · 5K\nHorário de la
+ rgada a confirmar.\n\nInscrições: Sympla\nhttps://www.sympla.com.br/even
+ to/marcha-atopica-curitiba-2026-corrida-em-prol-dos-pacientes-atopicos/363
+ 6888\n\nConfirme data\, horário e local no site oficial do organizador.\n
+ Run Hub CWB · runhubcwb.github.io
+LOCATION:Departamento de Educação Física da UFPR (Jardim das Américas)\
+ , Curitiba - PR
+URL:https://www.sympla.com.br/evento/marcha-atopica-curitiba-2026-corrida-e
+ m-prol-dos-pacientes-atopicos/3636888
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Marcha Atópica Curitiba
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
