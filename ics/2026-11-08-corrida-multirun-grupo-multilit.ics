@@ -3,17 +3,25 @@ VERSION:2.0
 PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:2026-11-08-corrida-multirun-grupo-multilit@runhubcwb.github.io
-DTSTAMP:20261103T120000Z
-DTSTART;VALUE=DATE:20261108
-DTEND;VALUE=DATE:20261109
+DTSTAMP:20261105T120000Z
+DTSTART;TZID=America/Sao_Paulo:20261108T070000
+DTEND;TZID=America/Sao_Paulo:20261108T090000
 SUMMARY:Corrida MultiRun (Grupo Multilit)
 DESCRIPTION:Corrida MultiRun (Grupo Multilit)\nSão José dos Pinhais · 10
- K\nHorário de largada a confirmar.\n\nInscrições: Assessocor\nhttps://a
- pp.assessocor.online/evento/corrida-multirun/902\n\nConfirme data\, horár
- io e local no site oficial do organizador.\nRun Hub CWB · runhubcwb.githu
- b.io
+ K\n\nInscrições: Assessocor\nhttps://app.assessocor.online/evento/corrid
+ a-multirun/902\n\nConfirme data\, horário e local no site oficial do orga
+ nizador.\nRun Hub CWB · runhubcwb.github.io
 LOCATION:Centro de Condicionamento Físico (R. Pedro Karwowski\, 760\, Ipê
  )\, São José dos Pinhais - PR
 URL:https://app.assessocor.online/evento/corrida-multirun/902
@@ -21,7 +29,7 @@ TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Corrida MultiRun (Grupo Multilit)
-TRIGGER:-PT15H
+TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 END:VCALENDAR
