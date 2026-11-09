@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-12-maratona-kids-boulevard-etapa-natal-infantil-inscricoes@runh
+ ubcwb.github.io
+DTSTAMP:20261109T120000Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:Último dia de inscrições · Maratona Kids Boulevard · Etapa Nat
+ al (infantil)
+DESCRIPTION:Último dia para se inscrever em Maratona Kids Boulevard · Eta
+ pa Natal (infantil) (12/12\, Curitiba).\n\nInscrições: Ticket Sports\nht
+ tps://www.ticketsports.com.br/e/e-88370\n\nConfirme o prazo no site oficia
+ l do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88370
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Maratona Kids Boulevard · Etapa
+  Natal (infantil)
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

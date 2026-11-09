@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-run-for-your-lives-corrida-oficial-do-iron-maiden@runhubcwb.
+ github.io
+DTSTAMP:20261109T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Run For Your Lives · Corrida Oficial do Iron Maiden
+DESCRIPTION:Run For Your Lives · Corrida Oficial do Iron Maiden\nCuritiba 
+ · 5K\nHorário de largada a confirmar.\n\nInscrições: Ticket Sports\nht
+ tps://www.ticketsports.com.br/e/RUN+FOR+YOUR+LIVES+-+A+CORRIDA+OFICIAL+DO+
+ IRON+MAIDEN+(CURITIBA)-88495\n\nConfirme data\, horário e local no site o
+ ficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Cervejaria Bodebrown\, Curitiba - PR
+URL:https://www.ticketsports.com.br/e/RUN+FOR+YOUR+LIVES+-+A+CORRIDA+OFICIA
+ L+DO+IRON+MAIDEN+(CURITIBA)-88495
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Run For Your Lives · Corrida Oficial do Iron Maiden
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
