@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-31-11a-batel-run-inscricoes@runhubcwb.github.io
+DTSTAMP:20261116T120000Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+SUMMARY:Último dia de inscrições · 11ª Batel Run
+DESCRIPTION:Último dia para se inscrever em 11ª Batel Run (31/01\, Curiti
+ ba).\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.br/e/e-8
+ 8945\n\nConfirme o prazo no site oficial do organizador.\nRun Hub CWB · r
+ unhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-88945
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 11ª Batel Run
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

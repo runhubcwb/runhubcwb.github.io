@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-19-bar-em-bar-13a-edicao@runhubcwb.github.io
+DTSTAMP:20261116T120000Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Bar em Bar (13ª edição)
+DESCRIPTION:Bar em Bar (13ª edição)\nCuritiba · 3K\nHorário de largada
+  a confirmar.\n\nInscrições: slicker.com.br (calendário)\nhttps://slick
+ er.com.br/evento/xiii-bar-em-bar-2026\n\nConfirme data\, horário e local 
+ no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Largada: O Jardineiro (Av. Manoel Ribas\, 227\, São Francisco)\; 
+ chegada: Bar do Alemão\, Curitiba - PR
+URL:https://slicker.com.br/evento/xiii-bar-em-bar-2026
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bar em Bar (13ª edição)
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
