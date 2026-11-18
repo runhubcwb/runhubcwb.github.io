@@ -55,7 +55,7 @@
   function item(e,near){const r=e.r,saved=window.RHSeason.has(r.id);
     return `<li class="wz-r${near?' near':''}"><div class="wz-d"><b>${r.d.slice(8,10)}</b><span>${['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'][+r.d.slice(5,7)-1]}</span></div><div class="wz-b"><h4>${esc(r.n)}</h4><p class="wz-c">${esc(r.c)} · ${esc((r.dist||[]).join(' · ')||'distâncias a confirmar')}</p>
 <ul class="wz-why">${e.ok.map(t=>`<li>✓ ${esc(t)}</li>`).join('')}${near?e.miss.map(t=>`<li class="no">✗ ${esc(t)}</li>`).join(''):''}</ul>
-<div class="wz-acts"><a class="btn btn-sm" href="${esc(r.url)}" target="_blank" rel="noopener">${r.of?'Inscreva-se':'Ver no '+esc(r.lbl)} ↗</a><button type="button" class="star${saved?' on':''}" data-id="${r.id}" aria-pressed="${saved}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 17l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></svg><span>${'Vou correr'}</span></button><a class="wz-see" href="#r-${r.id}">ver no calendário</a></div></div></li>`;}
+<div class="wz-acts"><a class="btn btn-sm" href="${esc(r.url)}" target="_blank" rel="noopener" data-goatcounter-click="inscricao-${esc(r.id)}">${r.of?'Inscreva-se':'Ver no '+esc(r.lbl)} ↗</a><button type="button" class="star${saved?' on':''}" data-id="${r.id}" aria-pressed="${saved}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 17l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z"/></svg><span>${'Vou correr'}</span></button><a class="wz-see" href="#r-${r.id}">ver no calendário</a></div></div></li>`;}
   function show(){
     const ev=fut().map(evalR);
     const hit=ev.filter(e=>!e.miss.length).sort((a,b)=>score(b)-score(a)||(a.r.d<b.r.d?-1:1));
