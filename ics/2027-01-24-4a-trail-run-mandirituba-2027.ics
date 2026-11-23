@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-24-4a-trail-run-mandirituba-2027@runhubcwb.github.io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20270124
+DTEND;VALUE=DATE:20270125
+SUMMARY:4ª Trail Run Mandirituba 2027
+DESCRIPTION:4ª Trail Run Mandirituba 2027\nMandirituba · 6K · 3K\nHorár
+ io de largada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.tic
+ ketsports.com.br/e/e-89056\n\nConfirme data\, horário e local no site ofi
+ cial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Chácara MD Aventuras (Estrada Mato Branco dos Carvalhos\, s/n\, A
+ reia Branca dos Assis)\, Mandirituba - PR
+URL:https://www.ticketsports.com.br/e/e-89056
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:4ª Trail Run Mandirituba 2027
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

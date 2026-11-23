@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-corrida-e-caminhada-correndo-para-o-alvo-e-gp-trainer@runhub
+ cwb.github.io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Corrida e Caminhada Correndo para o Alvo e GP Trainer
+DESCRIPTION:Corrida e Caminhada Correndo para o Alvo e GP Trainer\nCuritiba
+  · distâncias a confirmar\nHorário de largada a confirmar.\n\nInscriç
+ ões: Sympla\nhttps://www.sympla.com.br/evento/corrida-e-caminhada-corrend
+ o-para-o-alvo-e-gp-trainer/3658040\n\nConfirme data\, horário e local no 
+ site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Parque Náutico (Av. Marechal Floriano Peixoto)\, Curitiba - PR
+URL:https://www.sympla.com.br/evento/corrida-e-caminhada-correndo-para-o-al
+ vo-e-gp-trainer/3658040
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Corrida e Caminhada Correndo para o Alvo e GP Trainer
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

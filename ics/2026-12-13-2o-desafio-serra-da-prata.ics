@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-2o-desafio-serra-da-prata@runhubcwb.github.io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:2º Desafio Serra da Prata
+DESCRIPTION:2º Desafio Serra da Prata\nMatinhos · 7\,5K\nHorário de larg
+ ada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.
+ com.br/e/e-88948\n\nConfirme data\, horário e local no site oficial do or
+ ganizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Ginásio Municipal Arena Vicente Gurski (Av. Juscelino Kubitschek\
+ , Tabuleiro)\, Matinhos - PR
+URL:https://www.ticketsports.com.br/e/e-88948
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:2º Desafio Serra da Prata
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

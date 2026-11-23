@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-11-29-health-care-run@runhubcwb.github.io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Health Care Run
+DESCRIPTION:Health Care Run\nSão José dos Pinhais · 5K\nHorário de larg
+ ada a confirmar.\n\nInscrições: Minhas Inscrições\nhttps://gominhasins
+ cricoes.com.br/evento/health-care-run-sao-jose-dos-pinhais\n\nConfirme dat
+ a\, horário e local no site oficial do organizador.\nRun Hub CWB · runhu
+ bcwb.github.io
+LOCATION:Fábrica da Volkswagen (R. Antônio Singer\, 6751\, Campo Largo da
+  Roseira)\, São José dos Pinhais - PR
+URL:https://gominhasinscricoes.com.br/evento/health-care-run-sao-jose-dos-p
+ inhais
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Health Care Run
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

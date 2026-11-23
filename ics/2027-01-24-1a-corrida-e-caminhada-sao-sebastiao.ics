@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-24-1a-corrida-e-caminhada-sao-sebastiao@runhubcwb.github.io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20270124
+DTEND;VALUE=DATE:20270125
+SUMMARY:1ª Corrida e Caminhada São Sebastião
+DESCRIPTION:1ª Corrida e Caminhada São Sebastião\nSão José dos Pinhais
+  · 5K\nHorário de largada a confirmar.\n\nInscrições: Assessocor\nhttp
+ s://app.assessocor.online/evento/corrida-e-caminhada-sao-sebastiao/945\n\n
+ Confirme data\, horário e local no site oficial do organizador.\nRun Hub 
+ CWB · runhubcwb.github.io
+LOCATION:Capela São Sebastião (R. São Longuinho\, Roseira de São Sebast
+ ião)\, São José dos Pinhais - PR
+URL:https://app.assessocor.online/evento/corrida-e-caminhada-sao-sebastiao/
+ 945
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:1ª Corrida e Caminhada São Sebastião
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

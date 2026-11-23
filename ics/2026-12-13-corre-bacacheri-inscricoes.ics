@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-13-corre-bacacheri-inscricoes@runhubcwb.github.io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Último dia de inscrições · Corre Bacacheri
+DESCRIPTION:Último dia para se inscrever em Corre Bacacheri (13/12\, Curit
+ iba).\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.br/e/CO
+ RRE+BACACHERI-88947\n\nConfirme o prazo no site oficial do organizador.\nR
+ un Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/CORRE+BACACHERI-88947
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · Corre Bacacheri
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

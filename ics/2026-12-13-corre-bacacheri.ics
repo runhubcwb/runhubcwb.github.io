@@ -5,15 +5,16 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-13-corre-bacacheri@runhubcwb.github.io
-DTSTAMP:20261122T120000Z
+DTSTAMP:20261123T120000Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Corre Bacacheri
-DESCRIPTION:Corre Bacacheri\nCuritiba · distâncias a confirmar\nHorário 
- de largada a confirmar.\n\nInscrições: Ticket Sports\nhttps://www.ticket
- sports.com.br/e/CORRE+BACACHERI-88947\n\nConfirme data\, horário e local 
- no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
-LOCATION:Curitiba - PR
+DESCRIPTION:Corre Bacacheri\nCuritiba · 5K\nHorário de largada a confirma
+ r.\n\nInscrições: Ticket Sports\nhttps://www.ticketsports.com.br/e/CORRE
+ +BACACHERI-88947\n\nConfirme data\, horário e local no site oficial do or
+ ganizador.\nRun Hub CWB · runhubcwb.github.io
+LOCATION:Clube Duque de Caxias (R. Marcelino Nogueira\, 1173)\, Curitiba - 
+ PR
 URL:https://www.ticketsports.com.br/e/CORRE+BACACHERI-88947
 TRANSP:TRANSPARENT
 BEGIN:VALARM

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-05-1a-corrida-guardioes-dos-mananciais-inscricoes@runhubcwb.git
+ hub.io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Último dia de inscrições · 1ª Corrida Guardiões dos Mananciai
+ s
+DESCRIPTION:Último dia para se inscrever em 1ª Corrida Guardiões dos Man
+ anciais (05/12\, Piraquara).\n\nInscrições: Assessocor\nhttps://app.asse
+ ssocor.online/evento/corrida-do-29o-bpm-piraquara/913\n\nConfirme o prazo 
+ no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://app.assessocor.online/evento/corrida-do-29o-bpm-piraquara/913
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 1ª Corrida Guardiões dos Manan
+ ciais
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

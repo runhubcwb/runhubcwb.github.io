@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-01-24-4a-trail-run-mandirituba-2027-inscricoes@runhubcwb.github.io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:Último dia de inscrições · 4ª Trail Run Mandirituba 2027
+DESCRIPTION:Último dia para se inscrever em 4ª Trail Run Mandirituba 2027
+  (24/01\, Mandirituba).\n\nInscrições: Ticket Sports\nhttps://www.ticket
+ sports.com.br/e/e-89056\n\nConfirme o prazo no site oficial do organizador
+ .\nRun Hub CWB · runhubcwb.github.io
+URL:https://www.ticketsports.com.br/e/e-89056
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 4ª Trail Run Mandirituba 2027
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

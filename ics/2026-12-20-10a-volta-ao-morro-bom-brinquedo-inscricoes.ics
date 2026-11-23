@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Run Hub CWB//Agenda de corridas//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2026-12-20-10a-volta-ao-morro-bom-brinquedo-inscricoes@runhubcwb.github
+ .io
+DTSTAMP:20261123T120000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Último dia de inscrições · 10ª Volta ao Morro Bom Brinquedo
+DESCRIPTION:Último dia para se inscrever em 10ª Volta ao Morro Bom Brinqu
+ edo (20/12\, Antonina).\n\nInscrições: Assessocor\nhttps://app.assessoco
+ r.online/evento/volta-ao-morro-bom-brinquedo---antonina/926\n\nConfirme o 
+ prazo no site oficial do organizador.\nRun Hub CWB · runhubcwb.github.io
+URL:https://app.assessocor.online/evento/volta-ao-morro-bom-brinquedo---ant
+ onina/926
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Último dia de inscrições · 10ª Volta ao Morro Bom Brinqued
+ o
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
