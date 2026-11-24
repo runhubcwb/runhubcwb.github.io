@@ -6,7 +6,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-05-iv-corrida-do-legislativo-fazenda-rio-grande@runhubcwb.githu
  b.io
-DTSTAMP:20261123T120000Z
+DTSTAMP:20261124T120000Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:IV Corrida do Legislativo · Fazenda Rio Grande
