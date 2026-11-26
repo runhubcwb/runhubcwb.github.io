@@ -6,7 +6,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-20-10a-volta-ao-morro-bom-brinquedo-inscricoes@runhubcwb.github
  .io
-DTSTAMP:20261124T120000Z
+DTSTAMP:20261126T120000Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Último dia de inscrições · 10ª Volta ao Morro Bom Brinquedo

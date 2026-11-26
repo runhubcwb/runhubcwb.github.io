@@ -6,7 +6,7 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:2026-12-13-corrida-e-caminhada-correndo-para-o-alvo-e-gp-trainer@runhub
  cwb.github.io
-DTSTAMP:20261124T120000Z
+DTSTAMP:20261126T120000Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Corrida e Caminhada Correndo para o Alvo e GP Trainer
